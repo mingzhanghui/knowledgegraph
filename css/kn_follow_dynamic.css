@@ -1,0 +1,3266 @@
+.editcollects,.w860px {
+    -webkit-box-shadow: 0 1px 3px #ccc;
+    -moz-box-shadow: 0 1px 3px #ccc;
+    -o-box-shadow: 0 1px 3px #ccc;
+    -ms-box-shadow: 0 1px 3px #ccc
+}
+
+ol,ul {
+    list-style: none
+}
+
+body {
+    font-family: Microsoft Yahei;
+    background-color: #edf1f5
+}
+
+.mainCol {
+    width: 1170px;
+    margin: 0 auto;
+    min-height: 800px
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+.kn_left {
+    float: left
+}
+
+.kn_right {
+    float: right
+}
+
+a:hover {
+    color: #666
+}
+
+.csdn-toolbar {
+    height: 40px;
+    background: #f6f6f6!important;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.csdn-toolbar .container {
+    width: 1140px
+}
+
+.csdn-toolbar .loginlink {
+    background: 0 0!important
+}
+
+.padding15px {
+    padding: 0 15px
+}
+
+.ernav {
+    background-color: #333;
+    width: 100%;
+    height: 52px
+}
+
+.ernav .logo {
+    background: url(../images/web/logo.png) top center no-repeat;
+    width: 100px;
+    height: 28px;
+    float: left;
+    margin-top: 12px
+}
+
+.ernav .navs {
+    float: left;
+    height: 52px;
+    margin-left: 10px
+}
+
+.ernav .navs li {
+    font-size: 16px;
+    float: left
+}
+
+.ernav .navs li .ahot {
+    position: relative
+}
+
+.ernav .navs li .ahot:before {
+    content: "hot";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #fff;
+    background-color: #ff5a00;
+    font-size: xx-small;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    height: 12px;
+    text-align: center;
+    line-height: 12px;
+    padding: 0 5px;
+    animation: navNew .4s linear infinite;
+    -moz-animation: navNew .4s linear infinite;
+    -webkit-animation: navNew .4s linear infinite;
+    -o-animation: navNew .4s linear infinite
+}
+
+.ernav .navs li a {
+    color: #eee;
+    padding: 0 30px;
+    line-height: 52px;
+    display: inline-block;
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    -ms-transition: background-color .3s ease-out;
+    -o-transition: background-color .3s ease-out
+}
+
+.ernav .navs li .curoot,.ernav .navs li .my_knowledge:hover {
+    color: #e49938
+}
+
+.ernav .navs li .my_knowledgewrap {
+    position: relative;
+    z-index: 10
+}
+
+.ernav .navs li .my_knowledge {
+    position: relative;
+    width: auto!important;
+    margin-top: 0!important
+}
+
+.ernav .navs li .my_knowledge i {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: #f94b4b;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    top: 35%;
+    right: 20px
+}
+
+.ernav .navs li .my_knowledge .fa-angle-down {
+    width: auto;
+    height: auto;
+    background: 0 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    right: 14px;
+    top: 40%
+}
+
+.ernav .navs li .submenu {
+    position: absolute;
+    top: 52px;
+    left: 22px;
+    background-color: #1f1f1f;
+    padding: 10px 15px 15px;
+    width: 101px;
+    display: none
+}
+
+.ernav .navs li .submenu:before {
+    border: 5px solid #1f1f1f;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 45%;
+    content: "";
+    width: 0;
+    height: 0
+}
+
+.ernav .navs li .submenu li {
+    padding: 5px 0;
+    border-bottom: 1px solid #2e2e2e;
+    float: none;
+    width: 100%;
+    text-align: center;
+    position: relative
+}
+
+.ernav .navs li .submenu li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 0;
+    line-height: normal
+}
+
+.ernav .navs li .submenu li a:hover {
+    color: #e49938
+}
+
+.ernav .navs li .submenu li a i {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: #f94b4b;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    top: 50%;
+    left: -3px
+}
+
+.ernav .navs li .submenu .noborder {
+    border: none
+}
+
+.ernav .navs .most a em {
+    margin-right: 6px
+}
+
+.ernav .navs .most a .fa {
+    vertical-align: middle;
+    margin-top: -8px
+}
+
+.ernav .listmenus {
+    display: none;
+    background-color: #212121;
+    position: absolute;
+    padding: 20px 5px;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    z-index: 1000
+}
+
+.ernav .listmenus ul {
+    float: left;
+    border-right: 1px solid #333;
+    padding: 0 25px
+}
+
+.ernav .listmenus ul li {
+    padding-bottom: 15px
+}
+
+.ernav .listmenus ul li a {
+    color: #fff;
+    padding: 0;
+    font-size: 14px
+}
+
+.ernav .listmenus ul .lastli {
+    padding-bottom: 0
+}
+
+.ernav .listmenus .lastul {
+    border: none
+}
+
+.ernav .allicons {
+    float: right;
+    height: 33px;
+    margin-top: 9px;
+    position: relative;
+    width: 272px;
+    z-index: 5
+}
+
+.ernav .allicons .nav_search {
+    width: 272px;
+    height: 33px;
+    background-color: #fff;
+    padding: 0 0 0 10px;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000
+}
+
+.ernav .allicons .nav_search label {
+    float: left;
+    width: 230px;
+    margin-bottom: 0
+}
+
+.ernav .allicons .nav_search label input {
+    width: 230px;
+    height: 33px;
+    border: none;
+    outline: 0;
+    color: #333;
+    font-size: 14px
+}
+
+.ernav .allicons .nav_search label .gray {
+    color: #bbb
+}
+
+.ernav .allicons .nav_search .searchbtn {
+    float: right;
+    position: relative;
+    margin-right: 5px;
+    margin-top: 1px;
+    width: 22px;
+    height: 30px;
+    text-align: center
+}
+
+.ernav .allicons .nav_search .searchbtn input {
+    background: rgba(255,0,0,0);
+    border: none;
+    outline: 0;
+    width: 22px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 5px
+}
+
+.ernav .allicons .nav_search .searchbtn .fa-search {
+    color: #ea9d38;
+    font-size: 18px;
+    margin-top: 6px;
+    margin-right: 22px
+}
+
+.ernav .allicons .nav_search .search_list {
+    border: 1px solid #ddd;
+    padding: 2px;
+    position: absolute;
+    left: 0;
+    top: 34px;
+    z-index: 10000;
+    width: 100%;
+    display: none
+}
+
+.ernav .allicons .nav_search .search_list .resultp {
+    font-size: 14px;
+    color: #333;
+    padding: 0 20px;
+    display: block
+}
+
+.ernav .allicons .nav_search .search_list .resultp:hover {
+    background-color: #eff3f5;
+    color: #ea9d38
+}
+
+.ernav .allicons .nav_search .search_list .resultp span {
+    display: block;
+    border-bottom: 1px dashed #ddd;
+    padding: 5px 0;
+    word-wrap: break-word;
+    position: relative
+}
+
+.ernav .allicons .nav_search .search_list .resultp span em {
+    word-wrap: break-word;
+    width: 185px;
+    display: inline-block
+}
+
+.ernav .allicons .nav_search .search_list .resultp span .fa {
+    color: #bbb;
+    font-size: 15px
+}
+
+.ernav .allicons .nav_search .search_list .resultp span .fa-clock-o {
+    margin-right: 10px;
+    vertical-align: top;
+    margin-top: 2px
+}
+
+.ernav .allicons .nav_search .search_list .resultp span .fa-close {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 7px
+}
+
+.ernav .allicons .nav_search .search_list .hotsearch,.ernav .allicons .nav_search .search_list .hotsearchall {
+    color: #999;
+    font-size: 12px;
+    padding: 5px 20px;
+    display: block
+}
+
+.ernav .allicons .nav_search .search_list .hotsearch:hover,.ernav .allicons .nav_search .search_list .hotsearchall:hover {
+    background-color: #eff3f5;
+    color: #ea9d38
+}
+
+.ernav .allicons .nav_search .search_list .hotsearchall {
+    display: none;
+    word-wrap: break-word
+}
+
+.ernav .allicons .nav_search .search_list .hotsearchall a {
+    color: #999
+}
+
+.ernav .allicons .nav_search .search_list .alltext {
+    font-size: 12px;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: 5px 20px;
+    border-top: 1px solid #f7f7f7;
+    margin-left: -3px;
+    width: 272px;
+    display: none
+}
+
+.ernav .allicons .nav_search .search_list .alltext a {
+    color: #333
+}
+
+.ernav .allicons .nav_search .search_list .listkeys {
+    margin-top: 5px;
+    margin-bottom: 10px
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a {
+    color: #333;
+    font-size: 14px;
+    display: block;
+    padding: 5px 20px;
+    line-height: normal;
+    word-wrap: break-word
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a:hover {
+    background-color: #eff3f5
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a:hover .stext em {
+    color: #ea9d38
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .simg {
+    float: left;
+    width: 40px
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .simg img {
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    border-radius: 40px;
+    border: 1px solid #eff3f5
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .stext {
+    float: left;
+    width: 175px;
+    margin-left: 10px
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .stext em {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    display: block
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .stext b {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999;
+    display: block;
+    margin-top: 5px
+}
+
+.ernav .allicons .nav_search .search_list .listkeys .tuwens,.ernav .allicons .nav_search .search_list .searchku {
+    display: none
+}
+
+.ernav .allicons .nav_search .search_list .listkeys li a .stext b i {
+    font-style: normal;
+    color: #333;
+    font-weight: 400
+}
+
+.ernav .allicons .nav_search .search_list .listkeys .tuwens a {
+    padding: 10px 20px
+}
+
+.ernav .allicons .nav_search .search_list .searchku .hotsearch,.ernav .allicons .nav_search .search_list .searchku .resultp {
+    font-size: 12px;
+    color: #333
+}
+
+.ernav .allicons .nav_search .search_list .searchku .hotsearch:hover,.ernav .allicons .nav_search .search_list .searchku .resultp:hover {
+    background-color: #eff3f5;
+    color: #ea9d38
+}
+
+.ernav .allicons .nav_search .search_list .searchdefault .resultp:hover {
+    color: #333
+}
+
+.ernav .allicons .nav_search .search_list .searchdefault .hotsearch:hover {
+    background-color: #fff;
+    color: #999
+}
+
+.ernav .allicons .tj_btn {
+    float: right;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #ea9d38;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin-left: 20px;
+    margin-top: 2px;
+    display: none
+}
+
+.ernav .allicons .tj_btn:hover {
+    background-color: #ea9d38
+}
+
+.csdn-toolbar .login-wrap .search {
+    display: none!important
+}
+
+@-ms-keyframes navNew {
+    0%,100% {
+        top: 10px
+    }
+
+    50% {
+        top: 11px
+    }
+}
+
+@-moz-keyframes navNew {
+    0%,100% {
+        top: 10px
+    }
+
+    50% {
+        top: 11px
+    }
+}
+
+@-webkit-keyframes navNew {
+    0%,100% {
+        top: 10px
+    }
+
+    50% {
+        top: 11px
+    }
+}
+
+@-o-keyframes navNew {
+    0%,100% {
+        top: 10px
+    }
+
+    50% {
+        top: 11px
+    }
+}
+
+@keyframes navNew {
+    0%,100% {
+        top: 10px
+    }
+
+    50% {
+        top: 11px
+    }
+}
+
+.banner_div {
+    height: 132px;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.banner_div .mainCol {
+    min-height: inherit
+}
+
+#alink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1207px;
+    height: 400px;
+    background: #fff;
+    opacity: 0;
+    z-index: 4
+}
+
+.hotmarke,.marklayer,.structmarke {
+    opacity: .8;
+    filter: alpha(Opacity=80)
+}
+
+.csdn-pagination {
+    text-align: center;
+    margin: 40px auto
+}
+
+.csdn-pagination .btn {
+    border: 1px solid #ccc;
+    color: #333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    height: 25px;
+    min-width: 25px;
+    line-height: 20px;
+    background: 0 0;
+    margin: 0 2px
+}
+
+.csdn-pagination .btn:hover {
+    color: #7b7b7b;
+    background-color: snow
+}
+
+.csdn-pagination .active,.csdn-pagination .active:hover {
+    color: #fff;
+    border: 1px solid #ccc
+}
+
+.csdn-pagination .page-nav b {
+    font-style: normal;
+    font-size: 12px;
+    color: #7b7b7b;
+    font-weight: 400;
+    margin-right: 10px;
+    display: inline-block
+}
+
+.csdn-pagination .page-nav b i {
+    color: #333;
+    font-style: normal;
+    font-weight: 400
+}
+
+.page1 .btn:hover {
+    border: 1px solid #4d4b3e
+}
+
+.page1 .active,.page1 .active:hover {
+    background: #4d4b3e
+}
+
+.page2 .btn:hover {
+    border: 1px solid #039ac5
+}
+
+.page2 .active,.page2 .active:hover {
+    background: #039ac5
+}
+
+.page3 .btn:hover {
+    border: 1px solid #85b120
+}
+
+.page3 .active,.page3 .active:hover {
+    background: #85b120
+}
+
+.page4 .btn:hover {
+    border: 1px solid #251f1f
+}
+
+.page4 .active,.page4 .active:hover {
+    background: #251f1f
+}
+
+.page5 .btn:hover {
+    border: 1px solid #f26b33
+}
+
+.page5 .active,.page5 .active:hover {
+    background: #f26b33
+}
+
+.whitebk,.windowLayer {
+    background-color: #fff
+}
+
+.windowLayer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    display: none
+}
+
+.closec {
+    color: #666;
+    font-size: 26px;
+    float: right;
+    font-weight: 700
+}
+
+.marklayer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 8
+}
+
+.editcollects {
+    width: 460px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.editcollects .layer02 {
+    position: relative
+}
+
+.editcollects .layer02 .closec {
+    color: #bbb;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    right: 20px;
+    top: 16px
+}
+
+.editcollects .layer02 .layer02top {
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd
+}
+
+.editcollects .layer02 .layer02top em {
+    font-size: 16px;
+    color: #333
+}
+
+.editcollects .layercontent {
+    padding: 0 20px
+}
+
+.editcollects .layercontent .layertop {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 40px 0
+}
+
+.editcollects .layercontent .layertop .fa-check-circle {
+    color: #91d63c
+}
+
+.editcollects .layercontent .layertop .fa-question-circle {
+    color: #3c97d6
+}
+
+.editcollects .layercontent .layertop .fa {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 15px
+}
+
+.editcollects .layercontent .layertop em {
+    font-size: 16px;
+    color: #333
+}
+
+.editcollects .layercontent .layerbottom .one {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px
+}
+
+.editcollects .layercontent .layerbottom .one span {
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #b1dfff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle
+}
+
+.editcollects .layercontent .layerbottom .one span .fa {
+    vertical-align: middle;
+    font-size: 12px;
+    margin-top: -5px;
+    color: #fff
+}
+
+.editcollects .layercontent .layerbottom .mylists {
+    margin-top: 23px
+}
+
+.editcollects .layercontent .layerbottom .mylists span {
+    color: #666;
+    font-size: 12px;
+    margin-right: 10px
+}
+
+.editcollects .layercontent .layerbottom .mylists a {
+    display: inline-block;
+    border: 1px solid #e5eaf0;
+    color: #666;
+    padding: 3px 6px;
+    margin-right: 15px;
+    margin-bottom: 15px
+}
+
+.editcollects .layercontent .layerbottom .mylists .root {
+    border-color: #eb9d38
+}
+
+.editcollects .layercontent .layerbottom .two {
+    margin-top: 5px
+}
+
+.editcollects .layercontent .layerbottom .two .fa {
+    color: #3d7ca8;
+    margin-right: 5px
+}
+
+.editcollects .layercontent .layerbottom .two input[type=text] {
+    border: 1px solid #eb9d38;
+    width: 100%;
+    outline: 0;
+    resize: none;
+    padding: 5px;
+    background-color: #f9f9fc;
+    display: none
+}
+
+.editcollects .layercontent .layerbottom .two a {
+    color: #3d7ca8
+}
+
+.header_top .numtext,.header_top .text {
+    color: #fff;
+    text-align: center
+}
+
+.editcollects .layercontent .lastbtns {
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f2f2f5;
+    margin-left: -20px;
+    width: 110%;
+    text-align: center
+}
+
+.editcollects .layercontent .lastbtns .addbtn {
+    background-color: #eb9d38
+}
+
+.editcollects .layercontent .lastbtns .cancelbtn {
+    background-color: #b8b8bd
+}
+
+.editcollects .layercontent .lastbtns .addbtn,.editcollects .layercontent .lastbtns .cancelbtn {
+    margin: 0 5px;
+    color: #fff;
+    width: 60px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px
+}
+
+.noborder {
+    border: none!important
+}
+
+.rightcontents,.w860px {
+    border: 1px solid #dfdfdf
+}
+
+.mainCol {
+    position: relative
+}
+
+.w860px {
+    width: 860px;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.w270px {
+    width: 270px
+}
+
+.rightcontents {
+    -webkit-box-shadow: 0 1px 3px #ccc;
+    -moz-box-shadow: 0 1px 3px #ccc;
+    -o-box-shadow: 0 1px 3px #ccc;
+    -ms-box-shadow: 0 1px 3px #ccc;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.whitebk {
+    background: #fff
+}
+
+.header_top {
+    margin-bottom: 20px
+}
+
+.header_top .banner {
+    background: url(../images/web/newimgs/newbanner.jpg) top center no-repeat;
+    height: 165px;
+    background-size: cover;
+    width: 100%
+}
+
+.header_top .text {
+    font-size: 26px;
+    padding-top: 60px
+}
+
+.header_top .centermiddle {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    height: 165px
+}
+
+.header_top .linkbtn {
+    display: block;
+    width: 1140px;
+    height: 165px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+
+.header_top .numtext .text {
+    display: block;
+    font-size: 12px;
+    padding-top: 50px;
+    padding-bottom: 10px
+}
+
+.sublist li a,.ytj {
+    display: inline-block
+}
+
+.header_top .numtext .num {
+    background: url(../images/web/newimgs/numberbj.png) top center no-repeat;
+    display: inline-block;
+    width: 38px;
+    height: 40px;
+    color: #333;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 1px
+}
+
+.green {
+    color: #15d31e;
+    font-size: 12px;
+    vertical-align: middle
+}
+
+.ytj {
+    color: #999
+}
+
+.sublist li {
+    font-size: 12px;
+    float: left
+}
+
+.sublist li a {
+    color: #666
+}
+
+.htitle {
+    height: 52px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd
+}
+
+.htitle span {
+    color: #666;
+    font-size: 16px;
+    float: left
+}
+
+.htitle a.most {
+    font-size: 14px;
+    color: #666;
+    float: right
+}
+
+.htitle a.most:hover {
+    color: #333
+}
+
+.divlist04 .list04 {
+    margin: 0 20px
+}
+
+.divlist04 .list04 li {
+    border-bottom: 1px dashed #eaeaea;
+    padding: 20px 0
+}
+
+.divlist04 .list04 li .l {
+    float: left;
+    width: 50px
+}
+
+.divlist04 .list04 li .l img {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px
+}
+
+.divlist04 .list04 li .r {
+    float: left;
+    margin-left: 15px;
+    width: 160px
+}
+
+.divlist04 .list04 li .r .title {
+    font-size: 16px;
+    color: #333;
+    word-wrap: break-word
+}
+
+.divlist04 .list04 li .r .title:hover {
+    color: #666
+}
+
+.divlist04 .list04 li .r p {
+    color: #bbb;
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.divlist04 .list04 li .r p em {
+    color: #333
+}
+
+.divlist04 .list04 .lastbtn {
+    padding: 15px 0;
+    border-bottom: none
+}
+
+.divlist04 .list04 .lastbtn a {
+    display: block;
+    height: 44px;
+    width: 230px;
+    line-height: 44px;
+    font-size: 14px;
+    border: 1px solid #ea9d38;
+    color: #ea9d38;
+    text-align: center
+}
+
+.divlist04 .list04 .lastbtn a .fa-plus-circle {
+    color: #ea9d38;
+    margin-right: 5px
+}
+
+.emailcontent {
+    padding: 20px
+}
+
+.emailcontent p {
+    font-size: 14px
+}
+
+.emailcontent .toptext {
+    color: #999
+}
+
+.emailcontent .bottomtext {
+    color: #bbb;
+    margin-top: 15px
+}
+
+.emailcontent .bottomtext b {
+    font-weight: 400;
+    color: #bbb
+}
+
+.emailcontent .bottomtext .blue {
+    color: #5295b2
+}
+
+.emailcontent .bottomtext a {
+    float: right;
+    color: #159ede
+}
+
+.emailcontent .bottomtext span {
+    display: block
+}
+
+.emailcontent .bottomtext span input {
+    width: 176px;
+    height: 30px;
+    border: 1px solid #c6d4da
+}
+
+.emailcontent .bottomtext span .baocun {
+    display: inline-block;
+    color: #fff;
+    background-color: #159ede;
+    width: 44px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px
+}
+
+.blank_10px,.blank_50px {
+    clear: both;
+    font-size: 0;
+    line-height: 0
+}
+
+.blank_50px {
+    height: 50px
+}
+
+.blank_10px {
+    height: 10px
+}
+
+.color {
+    color: #ea9d38!important
+}
+
+.kn_title .root {
+    border-bottom: 2px solid #ea9d38!important
+}
+
+.titletop a {
+    margin: 0 20px 0 0!important
+}
+
+.rightop a {
+    display: block;
+    background-color: #159ede;
+    height: 44px;
+    padding: 0 10px;
+    margin-bottom: 10px
+}
+
+.rightop a span {
+    background: url(../images/web/newimgs/personal.gif) left center no-repeat;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 44px;
+    text-indent: 35px
+}
+
+.loading {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding: 25px 0
+}
+
+.fixedyjfk {
+    position: fixed;
+    bottom: 100px;
+    z-index: 9;
+    width: 50px
+}
+
+.fixedyjfk a {
+    background-image: url(../images/web/newimgs/fixed.gif);
+    background-repeat: no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px
+}
+
+.fixedyjfk .publicbtn {
+    background-position: 0 -120px;
+    position: relative;
+    top: 5px
+}
+
+.fixedyjfk .publicbtn .erweima {
+    width: 176px;
+    height: 177px;
+    position: absolute;
+    right: 56px;
+    top: 2px;
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #d8dadb;
+    box-shadow: 2px 0 8px 0 #ccc
+}
+
+.fixedyjfk .publicbtn .erweima:after,.fixedyjfk .publicbtn .erweima:before {
+    position: absolute;
+    display: block;
+    top: 20%;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+.fixedyjfk .publicbtn .erweima:after {
+    content: '.';
+    border: 5px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    right: -10px
+}
+
+.fixedyjfk .publicbtn .erweima:before {
+    content: '';
+    border: 5px solid #ccc;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    right: -11px
+}
+
+.fixedyjfk .publicbtn .erweima .erweicontent {
+    width: 156px;
+    height: 156px;
+    margin: 0 auto;
+    border: 1px solid #f6f6f6;
+    padding-top: 10px
+}
+
+.fixedyjfk .publicbtn:hover {
+    background-position: -64px -120px
+}
+
+.fixedyjfk .zj {
+    background-position: 0 -60px;
+    position: relative;
+    top: 10px
+}
+
+.fixedyjfk .zj:hover {
+    background-position: -64px -60px
+}
+
+.fixedyjfk .yj {
+    background-position: 0 -180px;
+    position: relative;
+    top: 15px
+}
+
+.fixedyjfk .yj:hover {
+    background-position: -64px -180px
+}
+
+.fixedyjfk .zd {
+    background-position: 0 -240px;
+    position: absolute;
+    top: 170px;
+    z-index: 4;
+    display: none
+}
+
+.fixedyjfk .zd:hover {
+    background-position: -64px -240px
+}
+
+.myknowledgestruct {
+    margin-top: 25px;
+    padding: 0 30px
+}
+
+.myknowledgestruct .textfor {
+    font-size: 12px;
+    color: #688ca1;
+    background-color: #d7eefb;
+    padding: 3px 20px
+}
+
+.myknowledgestruct .listbox {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px
+}
+
+.myknowledgestruct .listbox li {
+    width: 250px;
+    height: 232px;
+    position: relative;
+    text-align: center;
+    float: left;
+    margin-top: 25px
+}
+
+.myknowledgestruct .listbox li a {
+    display: block
+}
+
+.myknowledgestruct .listbox li .colorbox {
+    width: 24px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -12px;
+    background-color: #000
+}
+
+.myknowledgestruct .listbox li .boxphoto {
+    display: block;
+    width: 100px;
+    height: 86px;
+    margin: 28px auto 0
+}
+
+.myknowledgestruct .listbox li .title {
+    color: #184669;
+    font-size: 16px;
+    display: inline-block;
+    margin: 20px 0 15px
+}
+
+.myknowledgestruct .listbox li .numbs {
+    display: block;
+    color: #9dadb9;
+    font-size: 12px
+}
+
+.myknowledgestruct .listbox li .numbs em {
+    display: block;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 6px
+}
+
+.myknowledgestruct .listbox .rootli {
+    -webkit-box-shadow: 1px 1px 4px #ccc;
+    -moz-box-shadow: 1px 1px 4px #ccc;
+    -ms-box-shadow: 1px 1px 4px #ccc;
+    -o-box-shadow: 1px 1px 4px #ccc;
+    box-shadow: 1px 1px 4px #ccc
+}
+
+.myknowledgestruct .listbox .liroot {
+    background-color: #f5f8f9;
+    -webkit-box-shadow: 1px 1px 4px #ccc;
+    -moz-box-shadow: 1px 1px 4px #ccc;
+    -ms-box-shadow: 1px 1px 4px #ccc;
+    -o-box-shadow: 1px 1px 4px #ccc;
+    box-shadow: 1px 1px 4px #ccc
+}
+
+.simplemyknowledgestruct {
+    padding: 0 30px
+}
+
+.simplemyknowledgestruct .subinfors {
+    background-color: #eff6f8;
+    height: 128px;
+    padding: 22px 30px
+}
+
+.simplemyknowledgestruct .subinfors .subleft {
+    float: left;
+    font-size: 14px;
+    width: 84px;
+    height: 84px;
+    overflow: hidden
+}
+
+.simplemyknowledgestruct .subinfors .allbtns {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 25px
+}
+
+.simplemyknowledgestruct .subinfors .allbtns .title {
+    font-size: 14px;
+    color: #2092d9;
+    font-weight: 700
+}
+
+.simplemyknowledgestruct .subinfors .allbtns em {
+    font-size: 13px;
+    color: #b8c3d9
+}
+
+.simplemyknowledgestruct .subinfors .allbtns p {
+    font-size: 14px;
+    color: #7c89a6;
+    font-weight: 700;
+    margin-top: 8px
+}
+
+.simplemyknowledgestruct .subinfors .allbtns p a {
+    color: #7c89a6
+}
+
+.simplemyknowledgestruct .subinfors .allbtns .optcz {
+    display: block;
+    margin-top: 15px
+}
+
+.simplemyknowledgestruct .subinfors .allbtns .optcz a {
+    font-size: 13px;
+    color: #b8c3d9;
+    display: inline-block;
+    margin-right: 45px
+}
+
+.simplemyknowledgestruct .subinfors .allbtns .optcz a i {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.simplemyknowledgestruct .subinfors .subright {
+    float: right;
+    color: #819dab;
+    margin-top: 5px
+}
+
+.simplemyknowledgestruct .subinfors .subright a {
+    height: auto;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: #7c89a6;
+    display: inline-block;
+    border: 1px solid #b8c3d9;
+    margin: 0 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px
+}
+
+.simplemyknowledgestruct .subinfors .subright .active {
+    color: #faa91e;
+    border-color: #faa91e
+}
+
+.simplemyknowledgestruct .structWrap {
+    margin-top: 30px
+}
+
+.simplemyknowledgestruct .structWrap .menuL {
+    float: left;
+    width: 177px;
+    background-color: #f5f8f9;
+    padding: 18px 20px;
+    min-height: 400px
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li {
+    position: relative;
+    border-left: 3px solid #d9e5eb;
+    padding: 0 15px 25px 0
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .whiteblank {
+    width: 7px;
+    height: 12px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 0
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .whiteblank .cirle {
+    display: block;
+    width: 7px;
+    height: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    position: absolute;
+    top: 2px;
+    background-color: #333
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li a {
+    position: relative;
+    top: -3px;
+    font-weight: 700;
+    font-size: 14px;
+    left: 15px
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li a:hover {
+    color: #333
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .subul {
+    margin-left: 15px;
+    display: none
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .subul li {
+    border: none;
+    padding: 8px 0 0;
+    position: relative
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .subul li a {
+    color: #333;
+    font-weight: 400;
+    left: 0
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox .licur .root,.simplemyknowledgestruct .structWrap .menuL .menubox li .subul li .root {
+    color: #4085ab
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li .subul li a em {
+    font-size: 20px
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox li:last-child {
+    padding-bottom: 0;
+    border-color: transparent
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox .licur {
+    border-color: #4085ab
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox .licur .whiteblank .cirle {
+    background-color: #4085ab
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox .ligray .whiteblank .cirle {
+    background-color: #999
+}
+
+.simplemyknowledgestruct .structWrap .menuL .menubox .curgray,.simplemyknowledgestruct .structWrap .menuL .menubox .curgray:hover {
+    color: #999!important
+}
+
+.simplemyknowledgestruct .structWrap .contentR {
+    float: right;
+    width: 580px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .texttou {
+    border-bottom: 1px solid #d9e5eb;
+    padding-bottom: 10px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .texttou span {
+    font-size: 14px;
+    color: #687681;
+    float: left
+}
+
+.simplemyknowledgestruct .structWrap .contentR .texttou .addc {
+    font-size: 14px;
+    float: right;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #159ede;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .texttou .addc .fa {
+    margin-right: 5px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistbtn {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistbtn a {
+    color: #333;
+    display: inline-block;
+    border: 1px solid #d9e5eb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-right: 15px;
+    margin-bottom: 10px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistbtn .root,.simplemyknowledgestruct .structWrap .contentR .sublistbtn a:hover {
+    color: #159ede;
+    border-color: #159ede
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li {
+    border-bottom: 1px dashed #d9e5eb;
+    padding: 15px 0;
+    position: relative
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li span {
+    display: inline-block;
+    width: 88%;
+    margin-right: 15px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li a {
+    font-size: 16px;
+    color: #305786
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits {
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    width: 80px;
+    text-align: right
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .editbtn {
+    font-size: 14px;
+    color: #819dab
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan {
+    position: absolute;
+    width: 162px;
+    margin: 0;
+    right: 0;
+    top: 22px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px #ccc;
+    -moz-box-shadow: 1px 1px 4px #ccc;
+    -o-box-shadow: 1px 1px 4px #ccc;
+    -ms-box-shadow: 1px 1px 4px #ccc;
+    box-shadow: 1px 1px 4px #ccc;
+    color: #d9e5eb;
+    padding: 3px 5px;
+    z-index: 5;
+    display: none
+}
+
+.addknowledgecontent,.attenNewLayer,.editknowledgecontent {
+    -webkit-box-shadow: 0 1px 3px #ccc;
+    -moz-box-shadow: 0 1px 3px #ccc;
+    -o-box-shadow: 0 1px 3px #ccc;
+    -ms-box-shadow: 0 1px 3px #ccc
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan:before {
+    border: 5px solid #e3e3e3;
+    width: 0;
+    height: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 8px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan:after {
+    border: 5px solid #fff;
+    width: 0;
+    height: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 8px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan a {
+    display: inline-block;
+    color: #819dab;
+    font-size: 14px;
+    margin: 0 10px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan .delete {
+    color: #d82929
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli li:last-child {
+    border-bottom-style: solid;
+    padding-bottom: 30px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .sublistli .liroot {
+    background-color: #f5f8f9
+}
+
+.simplemyknowledgestruct .structWrap .contentR .simpleresult {
+    min-height: 200px;
+    padding: 40px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .simpleresult p span {
+    color: #999;
+    font-size: 14px;
+    padding-top: 14px;
+    display: inline-block;
+    line-height: 1.8;
+    padding-left: 15px
+}
+
+.simplemyknowledgestruct .structWrap .contentR .simpleresult p span a {
+    color: #159ede
+}
+
+.simplemyknowledgestruct .structWrap .contentR .simpleresult p .fa {
+    font-size: 88px;
+    color: #eaeaea;
+    float: left
+}
+
+.myknowledgestructno {
+    min-height: 200px;
+    padding: 60px 40px;
+    text-align: center
+}
+
+.myknowledgestructno p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.myknowledgestructno p .fa {
+    display: block;
+    font-size: 88px;
+    color: #eaeaea;
+    margin-bottom: 5px
+}
+
+.addknowledgecontent,.editknowledgecontent {
+    display: none;
+    width: 538px;
+    margin-left: -269px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.addknowledgecontent .layer02top,.editknowledgecontent .layer02top {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333
+}
+
+.addknowledgecontent .layer02top em,.editknowledgecontent .layer02top em {
+    font-size: 16px;
+    color: #333
+}
+
+.addknowledgecontent .layerwrap,.editknowledgecontent .layerwrap {
+    padding-top: 20px
+}
+
+.addknowledgecontent .layerwrap .inputs,.editknowledgecontent .layerwrap .inputs {
+    padding: 10px 15px
+}
+
+.addknowledgecontent .layerwrap .inputs input,.editknowledgecontent .layerwrap .inputs input {
+    border: 1px solid #dce4eb;
+    width: 450px;
+    height: 32px;
+    background-color: #f8fafc;
+    outline: 0;
+    padding: 0 5px
+}
+
+.addknowledgecontent .layerwrap .inputs label,.editknowledgecontent .layerwrap .inputs label {
+    color: #333;
+    font-size: 14px;
+    margin-right: 8px
+}
+
+.addknowledgecontent .layerwrap .inputs .error,.editknowledgecontent .layerwrap .inputs .error {
+    font-size: 12px;
+    color: #e06363;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: none
+}
+
+.addknowledgecontent .layerwrap .inputs .error .fa,.editknowledgecontent .layerwrap .inputs .error .fa {
+    color: #e06363;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.addknowledgecontent .layerwrap .pbottom,.editknowledgecontent .layerwrap .pbottom {
+    background-color: #f2f2f5;
+    height: 50px;
+    text-align: center
+}
+
+.addknowledgecontent .layerwrap .pbottom a,.editknowledgecontent .layerwrap .pbottom a {
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 12px 5px 0 0;
+    outline: 0;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 26px
+}
+
+.addknowledgecontent .layerwrap .pbottom .addbutn,.editknowledgecontent .layerwrap .pbottom .addbutn {
+    background-color: #d9881f
+}
+
+.addknowledgecontent .layerwrap .pbottom .resetbtn,.editknowledgecontent .layerwrap .pbottom .resetbtn {
+    background-color: #909098
+}
+
+.addknowledgecontent .layerwrap .selectlayer,.editknowledgecontent .layerwrap .selectlayer {
+    padding: 10px 0
+}
+
+.addknowledgecontent .layerwrap .selectlayer .selectdiv,.editknowledgecontent .layerwrap .selectlayer .selectdiv {
+    width: 240px;
+    height: 35px;
+    border: 1px solid #dce4eb;
+    background-color: #f8fafc;
+    float: left;
+    margin: 8px 0 8px 15px
+}
+
+.addknowledgecontent .layerwrap .selectlayer .selectdiv select,.editknowledgecontent .layerwrap .selectlayer .selectdiv select {
+    border: none;
+    outline: 0;
+    height: 30px;
+    width: 235px
+}
+
+.addknowledgecontent .layerwrap .addsuccess,.editknowledgecontent .layerwrap .addsuccess {
+    display: none;
+    color: #f94b4b;
+    font-size: 14px;
+    padding: 10px 15px
+}
+
+.attenNewLayer {
+    display: none;
+    width: 460px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px #ccc;
+    height: auto
+}
+
+.attenNewLayer .layer02top {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333
+}
+
+.attenNewLayer .layer02top em {
+    font-size: 16px;
+    color: #333
+}
+
+.attenNewLayer .layerwrap .infor {
+    padding: 45px 20px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 160px
+}
+
+.attenNewLayer .layerwrap .infor span {
+    color: #333;
+    font-weight: 700
+}
+
+.attenNewLayer .layerwrap .infor span a {
+    color: #159ede
+}
+
+.attenNewLayer .layerwrap .infor em {
+    color: #666;
+    font-size: 14px;
+    display: block;
+    font-weight: 400;
+    margin-top: 10px
+}
+
+.attenNewLayer .layerwrap .infor b {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.attenNewLayer .layerwrap .infor .mangentbtn {
+    color: #159ede;
+    display: inline-block;
+    margin-top: 5px
+}
+
+.attenNewLayer .layerwrap .pbottom {
+    background-color: #f6f7f9;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 20px;
+    color: #959596
+}
+
+.knowledgecontentmove {
+    display: none;
+    width: 538px;
+    margin-left: -269px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 3px #ccc;
+    -moz-box-shadow: 0 1px 3px #ccc;
+    -o-box-shadow: 0 1px 3px #ccc;
+    -ms-box-shadow: 0 1px 3px #ccc;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.knowledgecontentmove .layer02top {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333
+}
+
+.knowledgecontentmove .layer02top em {
+    font-size: 16px;
+    color: #333
+}
+
+.knowledgecontentmove .layerwrap .knowledgemove {
+    padding: 30px 5px
+}
+
+.knowledgecontentmove .layerwrap .selectdiv {
+    width: 240px;
+    height: 35px;
+    border: 1px solid #dce4eb;
+    background-color: #f8fafc;
+    float: left;
+    margin: 8px 0 8px 15px
+}
+
+.knowledgecontentmove .layerwrap .selectdiv select {
+    border: none;
+    outline: 0;
+    height: 30px;
+    width: 235px
+}
+
+.knowledgecontentmove .layerwrap .pbottom {
+    background-color: #f2f2f5;
+    height: 50px;
+    text-align: center
+}
+
+.knowledgecontentmove .layerwrap .pbottom a {
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 12px 5px 0 0;
+    outline: 0;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 26px
+}
+
+.knowledgecontentmove .layerwrap .pbottom .addbutn {
+    background-color: #d9881f
+}
+
+.knowledgecontentmove .layerwrap .pbottom .resetbtn {
+    background-color: #909098
+}
+
+.knowledgecontentmove .layerwrap .addsuccess {
+    display: none;
+    color: #f94b4b;
+    font-size: 14px;
+    padding: 10px 15px
+}
+
+.attenlist {
+    padding: 0 30px 0 8px
+}
+
+.attenlist li {
+    border: 1px solid #ddd;
+    width: 250px;
+    height: 180px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    overflow: hidden
+}
+
+.attenlist li .divtop {
+    height: 62px;
+    position: relative
+}
+
+.attenlist li .divtop span {
+    display: inline-block
+}
+
+.attenlist li .divtop .picphoto {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    bottom: -40px;
+    left: 50%;
+    margin-left: -40px
+}
+
+.attenlist li .divtop .picphoto a {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    border-radius: 80px
+}
+
+.attenlist li .divtop .picphoto a img {
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    border-radius: 80px
+}
+
+.attenlist li .divbottom {
+    margin-top: 50px
+}
+
+.attenlist li .divbottom .title {
+    text-align: center;
+    height: 28px;
+    padding: 0 10px;
+    overflow: hidden
+}
+
+.attenlist li .divbottom .title a {
+    display: inline-block;
+    font-size: 16px;
+    color: #333
+}
+
+.attenlist li .divbottom .numtexts {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10px;
+    margin-top: 5px
+}
+
+.attenlist li .divbottom .numtexts b {
+    color: #333;
+    font-weight: 400
+}
+
+.attenlist li .divbottom .numtexts em {
+    display: inline-block;
+    height: 15px;
+    overflow: hidden;
+    vertical-align: text-top
+}
+
+.marklayer {
+    top: 90px
+}
+
+.deleteconfrim,.editknowledgecontent {
+    display: none
+}
+
+.knowledgestructmap {
+    padding: 0
+}
+
+.knowledgestructmap .selectab {
+    font-size: 14px;
+    padding: 30px 30px 10px
+}
+
+.knowledgestructmap .selectab em {
+    color: #333;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.knowledgestructmap .selectab a {
+    color: #666;
+    border: 1px solid #fff;
+    padding: 2px 6px;
+    display: inline-block;
+    margin: 0 6px
+}
+
+.knowledgestructmap .selectab .root {
+    color: #ea9d38;
+    border-color: #ea9d38;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px
+}
+
+.knowledgestructmap .selectab .allmaps {
+    font-size: 14px;
+    color: #159ede;
+    border: none;
+    float: right;
+    margin: 0;
+    padding: 0
+}
+
+.knowledgestructmap .structmaplist {
+    padding: 0 20px
+}
+
+.knowledgestructmap .structmaplist li {
+    float: left;
+    width: 250px;
+    height: 350px;
+    background: url(../images/web/newimgs/mystructmap.gif) top center no-repeat;
+    position: relative;
+    margin: 10px 10px 9px 9px;
+    cursor: pointer
+}
+
+.knowledgestructmap .structmaplist li .divtop {
+    text-align: center;
+    margin-top: 80px
+}
+
+.knowledgestructmap .structmaplist li .divtop .pot {
+    background: url(../images/web/newimgs/pot.png) top center no-repeat;
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto
+}
+
+.knowledgestructmap .structmaplist li .divtop .pot img {
+    -webkit-border-radius: 58px;
+    -moz-border-radius: 58px;
+    -ms-border-radius: 58px;
+    -o-border-radius: 58px;
+    border-radius: 58px;
+    margin-top: 15px
+}
+
+.knowledgestructmap .structmaplist li .divtop .potr {
+    background: url(../images/web/newimgs/potr.png) top center no-repeat
+}
+
+.knowledgestructmap .structmaplist li .divbottoms {
+    position: absolute;
+    bottom: 12px;
+    height: 153px;
+    padding: 0 25px;
+    width: 100%
+}
+
+.knowledgestructmap .structmaplist li .divbottoms p {
+    text-align: center
+}
+
+.knowledgestructmap .structmaplist li .divbottoms p a,.knowledgestructmap .structmaplist li .divbottoms p em {
+    color: #5ba6d1
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .title {
+    font-size: 18px;
+    color: #333;
+    font-weight: 700
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .num {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    background: 0 0;
+    position: static
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar {
+    position: relative;
+    height: 60px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar span {
+    display: block;
+    background: url(../images/web/newimgs/graystar.png) top center no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .x01 {
+    -webkit-transform: rotateZ(53deg);
+    -moz-transform: rotateZ(53deg);
+    -o-transform: rotateZ(53deg);
+    -ms-transform: rotateZ(53deg);
+    transform: rotateZ(53deg);
+    top: -8px;
+    left: 4px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .x02 {
+    -webkit-transform: rotateZ(37deg);
+    -moz-transform: rotateZ(37deg);
+    -o-transform: rotateZ(37deg);
+    -ms-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    left: 38px;
+    top: 17px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .x03 {
+    -webkit-transform: rotateZ(15deg);
+    -moz-transform: rotateZ(15deg);
+    -o-transform: rotateZ(15deg);
+    -ms-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+    left: 82px;
+    top: 25px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .x04 {
+    -webkit-transform: rotateZ(-4deg);
+    -moz-transform: rotateZ(-4deg);
+    -o-transform: rotateZ(-4deg);
+    -ms-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+    left: 128px;
+    top: 18px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .x05 {
+    -webkit-transform: rotateZ(-11deg);
+    -moz-transform: rotateZ(-11deg);
+    -o-transform: rotateZ(-11deg);
+    -ms-transform: rotateZ(-11deg);
+    transform: rotateZ(-11deg);
+    left: 168px;
+    top: -6px
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstar .xr {
+    background: url(../images/web/newimgs/xr.png) top center no-repeat
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstarhover .x01r {
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    transform: rotateZ(0)
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstarhover .x02r {
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg)
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstarhover .x03r {
+    -webkit-transform: rotateZ(-27deg);
+    -moz-transform: rotateZ(-27deg);
+    -o-transform: rotateZ(-27deg);
+    -ms-transform: rotateZ(-27deg);
+    transform: rotateZ(-27deg)
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstarhover .x04r {
+    -webkit-transform: rotateZ(-53deg);
+    -moz-transform: rotateZ(-53deg);
+    -o-transform: rotateZ(-53deg);
+    -ms-transform: rotateZ(-53deg);
+    transform: rotateZ(-53deg)
+}
+
+.knowledgestructmap .structmaplist li .divbottoms .allstarhover .x05r {
+    -webkit-transform: rotateZ(-63deg);
+    -moz-transform: rotateZ(-63deg);
+    -o-transform: rotateZ(-63deg);
+    -ms-transform: rotateZ(-63deg);
+    transform: rotateZ(-63deg)
+}
+
+.knowledgestructmap .structmaplist li .botxt {
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: #666
+}
+
+.knowledgestructmap .structmaplist .root {
+    background: url(../images/web/newimgs/mystructmapr.gif) top center no-repeat
+}
+
+.knowledgestructmap .structmaplist .root .divbottoms .num,.knowledgestructmap .structmaplist .root .divbottoms .title {
+    color: #999
+}
+
+.knowledgestructmap .structmaplist .root .divbottoms .allstar span {
+    display: block;
+    background: url(../images/web/newimgs/graystar01.png) top center no-repeat
+}
+
+.knowledgestructmap .borderbot {
+    border-bottom: 1px solid #ddd;
+    padding-top: 30px
+}
+
+.knowledgestructmap .csdn-pagination {
+    margin: 25px auto
+}
+
+.divpertop {
+    padding: 20px;
+    text-align: center
+}
+
+.divpertop dd {
+    text-align: center
+}
+
+.divpertop dd img {
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    border-radius: 80px
+}
+
+.divpertop dt .perinfor,.rneWrapTop a {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px
+}
+
+.divpertop dt .title {
+    display: block;
+    margin-top: 10px
+}
+
+.divpertop dt .title a {
+    color: #333;
+    font-size: 16px
+}
+
+.divpertop dt .perinfor {
+    margin-top: 5px;
+    display: inline-block;
+    background-color: #ea9d38;
+    border-radius: 4px;
+    padding: 0 5px;
+    margin-left: 10px
+}
+
+.divpertop dt .perinfor em {
+    font-size: xx-small;
+    color: #fff;
+    font-weight: 400
+}
+
+.divpertop dt .wenhao {
+    background: url(../images/web/newimgs/wenhao.gif) top center no-repeat;
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    vertical-align: inherit
+}
+
+.divpertop dt .process {
+    height: 6px;
+    width: 100%;
+    background-color: #ececec;
+    display: inline-block;
+    position: relative;
+    margin: 15px 0 10px
+}
+
+.rneWrapBot .ptotext a,.rneWrapBot .ptotext a i {
+    margin-left: 5px;
+    display: inline-block
+}
+
+.divpertop dt .process em {
+    background-color: #ecac60;
+    height: 6px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.divpertop dt p {
+    font-size: 12px;
+    color: #bbb;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left
+}
+
+.rneWrapBot .downbtn,.rneWrapTop a {
+    height: 34px;
+    line-height: 34px;
+    text-align: center
+}
+
+.divpertop dt p em {
+    color: #667a9b;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.knowledgeattens {
+    padding-bottom: 50px
+}
+
+.rneWrapTop {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd
+}
+
+.rneWrapTop p {
+    font-size: 12px;
+    color: #666
+}
+
+.rneWrapTop a {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    background-color: #ecac60;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 5px
+}
+
+.rneWrapTop a:hover {
+    background-color: #d5964b
+}
+
+.rneWrapTop a i {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.rneWrapBot {
+    padding: 20px
+}
+
+.rneWrapBot .ptotext {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px
+}
+
+.rneWrapBot .ptotext a {
+    color: #159ede
+}
+
+.rneWrapBot .pbotext {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px
+}
+
+.rneWrapBot .downbtn {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    background-color: #159ede;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px
+}
+
+.rneWrapBot .downbtn:hover {
+    background-color: #0786c2
+}
+
+.rneWrapBot .downbtn i {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.tytext {
+    text-align: left;
+    margin-top: 8px
+}
+
+.tytext a {
+    color: #159ede;
+    font-size: 12px
+}
+
+.strutlayer {
+    background: url(../images/web/newimgs/strutlayer.gif) top center no-repeat;
+    width: 920px;
+    height: 533px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 15;
+    display: none
+}
+
+.strutlayer .closed {
+    border: 5px solid #224159;
+    background-color: #fff;
+    display: block;
+    width: 36px;
+    height: 36px;
+    color: #040404;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    -ms-border-radius: 36px;
+    -o-border-radius: 36px;
+    border-radius: 36px;
+    position: absolute;
+    right: -10px;
+    top: -10px
+}
+
+.strutlayer .strutcontent {
+    height: 700px;
+    padding: 20px
+}
+
+.strutlayer .strutcontent .structop {
+    position: relative;
+    height: 108px
+}
+
+.strutlayer .strutcontent .structop .logotop {
+    background: url(../images/web/newimgs/pot.png) top center no-repeat;
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    text-align: center;
+    top: -45px;
+    left: 50%;
+    margin-left: -45px;
+    position: absolute
+}
+
+.strutlayer .strutcontent .structop .logotop img {
+    -webkit-border-radius: 58px;
+    -moz-border-radius: 58px;
+    -ms-border-radius: 58px;
+    -o-border-radius: 58px;
+    border-radius: 58px;
+    margin-top: 15px
+}
+
+.strutlayer .strutcontent .structop .textbot {
+    position: relative;
+    top: 68px;
+    padding: 0 0 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 817px;
+    margin: 0 auto
+}
+
+.strutlayer .strutcontent .structop .textbot .textfor {
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+    color: #666
+}
+
+.strutlayer .strutcontent .structop .textbot .textfor em {
+    font-size: 24px;
+    color: #333;
+    vertical-align: middle
+}
+
+.strutlayer .strutcontent .structop .textbot .title {
+    font-size: 18px;
+    color: #159ede
+}
+
+.strutlayer .strutcontent .structop .textbot .allstarts {
+    position: absolute;
+    right: 0;
+    top: -10px
+}
+
+.strutlayer .strutcontent .structop .textbot .allstarts em {
+    background: url(../images/web/newimgs/defaultstart.gif) top center no-repeat;
+    display: inline-block;
+    width: 34px;
+    height: 32px;
+    margin-left: 10px
+}
+
+.strutlayer .strutcontent .structop .textbot .allstarts .root {
+    background: url(../images/web/newimgs/selectsrart.gif) top center no-repeat
+}
+
+.strutlayer .strutcontent .structbot {
+    padding: 0 10px;
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    margin-top: 15px
+}
+
+.strutlayer .strutcontent .structbot .strutwrap {
+    width: 817px;
+    margin: 0 auto;
+    position: relative
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li {
+    border-bottom: 1px dashed #ddd;
+    padding: 15px 0;
+    position: relative
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .sc {
+    float: left;
+    width: 470px
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .sc a {
+    font-size: 14px;
+    color: #666
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .sc a em {
+    color: #159ede
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .nums {
+    color: #bbb;
+    font-size: 14px;
+    float: left;
+    margin: 0 50px;
+    width: 50px;
+    text-align: center
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .numrot {
+    color: #666
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .exc {
+    color: #ffa800;
+    font-size: 16px;
+    float: left;
+    width: 65px;
+    text-align: right
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .opt {
+    position: absolute;
+    right: 0;
+    top: 10px
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .opt a {
+    display: inline-block;
+    background-color: #ffd341;
+    font-size: 14px;
+    color: #333;
+    width: 90px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .opt .ywc {
+    background-color: #f6f6f6;
+    color: #bbb
+}
+
+.strutlayer .strutcontent .structbot .strutwrap .liststructs li .opt .ywc .fa {
+    color: #91d63c;
+    font-size: 12px;
+    margin-right: 5px;
+    display: inline-block
+}
+
+.strutlayer .strutcontent .structbot .strutbar {
+    background-color: #f0f3f3;
+    width: 10px;
+    display: block;
+    height: 350px;
+    position: absolute;
+    right: 10px;
+    top: 0
+}
+
+.strutlayer .strutcontent .structbot .strutbar span {
+    display: block;
+    background-color: #b2c6c6;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px
+}
+
+.hotmarke,.structmarke {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 92px;
+    left: 0;
+    display: none;
+    z-index: 10
+}
+
+.ertab a,.newTabs .fa,.titletop .hot {
+    display: inline-block
+}
+
+.ertab {
+    border-bottom: 1px solid rgba(227,232,242,.5);
+    padding: 11px 40px
+}
+
+.ertab a {
+    font-size: 14px;
+    color: #b8c3d9;
+    margin-right: 18px
+}
+
+.ertab .root {
+    font-size: 14px;
+    color: #4c5c7f
+}
+
+.titletop {
+    height: 58px;
+    background-image: linear-gradient(-180deg,#fff 0,#f5f8fa 100%);
+    line-height: 58px;
+    padding: 0 20px;
+    border-bottom: 1px solid #e4e9f3
+}
+
+.titletop .hot {
+    color: #fff;
+    background-color: #e53b3b;
+    font-size: xx-small;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    line-height: normal;
+    -webkit-transform: scale(.6);
+    -moz-transform: scale(.6);
+    -o-transform: scale(.6);
+    -ms-transform: scale(.6);
+    transform: scale(.6);
+    padding: 0 3px;
+    margin-left: -2px;
+    vertical-align: text-top
+}
+
+.titletop em {
+    font-size: 14px;
+    color: #4c5c7f;
+    letter-spacing: 1px;
+    font-weight: 700
+}
+
+.titletop a {
+    font-size: 14px;
+    color: #b8c3d9;
+    padding: 4px 8px
+}
+
+.titletop .root {
+    background: #e6f4ff;
+    box-shadow: 0 1px 0 0 #fff,inset 0 1px 0 0 #dae2f2;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    color: #2092d9
+}
+
+.lr {
+    float: right
+}
+
+.newTabs {
+    color: #fff!important;
+    background-color: #159ede;
+    width: 89px;
+    height: 28px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-right: 0!important
+}
+
+.newTabs .fa {
+    margin-right: 5px
+}
+
+.hotlightIllustrations {
+    background-color: #fff;
+    width: 300px;
+    position: fixed;
+    height: 48px;
+    padding: 0 30px;
+    bottom: -72px;
+    right: 0;
+    z-index: 1500;
+    display: none;
+    border-left: 2px solid #91d63c;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd
+}
+
+.hotlightIllustrations .closed {
+    font-size: 22px;
+    color: #999;
+    font-weight: 700;
+    position: absolute;
+    right: 30px;
+    top: 14px
+}
+
+.hotlightIllustrations .knillcontent p {
+    line-height: 45px
+}
+
+.hotlightIllustrations .knillcontent p .fa-lights {
+    background: url(../images/web/newimgs/light.gif) top center no-repeat;
+    display: inline-block;
+    width: 22px;
+    height: 27px;
+    vertical-align: middle
+}
+
+.hotlightIllustrations .knillcontent p .fa-check-circle {
+    color: #91d63c;
+    font-size: 18px;
+    vertical-align: middle
+}
+
+.hotlightIllustrations .knillcontent p em {
+    vertical-align: middle;
+    font-size: 16px;
+    color: #666;
+    display: inline-block;
+    margin-left: 10px
+}
+
+.knillustwrap {
+    width: 720px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 15;
+    margin-left: -360px;
+    background-color: #fff;
+    display: none
+}
+
+.knillustwrap .knillcontent {
+    padding: 30px
+}
+
+.knillustwrap .knillcontent .stop {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    width: 100%;
+    padding-bottom: 20px
+}
+
+.knillustwrap .knillcontent .stop em {
+    font-size: 20px;
+    color: #159ede
+}
+
+.knillustwrap .knillcontent .stop .closed {
+    color: #666;
+    font-size: 22px;
+    float: right;
+    font-weight: 700
+}
+
+.knillustwrap .knillcontent .knillnei p {
+    font-size: 14px;
+    color: #666;
+    padding: 15px 0
+}
+
+.knillustwrap .knillcontent .kntable table td,.knillustwrap .knillcontent .kntable table th {
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px 0
+}
+
+.releaselayer .layer02top,.releaselayer .layer02top em {
+    font-size: 16px;
+    color: #333
+}
+
+.knillustwrap .knillcontent .kntable table th {
+    background-color: #f3f6f8
+}
+
+.releaselayer {
+    display: none;
+    width: 540px;
+    margin-left: -270px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 3px #ccc;
+    -moz-box-shadow: 0 1px 3px #ccc;
+    -o-box-shadow: 0 1px 3px #ccc;
+    -ms-box-shadow: 0 1px 3px #ccc;
+    box-shadow: 0 1px 3px #ccc
+}
+
+.releaselayer .layer02top {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px
+}
+
+.releaselayer .layerwrap .shareinfors {
+    text-align: centers
+}
+
+.releaselayer .layerwrap .shareinfors .successicon {
+    text-align: center;
+    padding: 25px 10px 5px
+}
+
+.releaselayer .layerwrap .shareinfors .successicon i {
+    font-size: 75px;
+    color: #91d63c
+}
+
+.releaselayer .layerwrap .shareinfors .successtext {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 15px 10px
+}
+
+.releaselayer .layerwrap .shareinfors .successtext a {
+    color: #667a9b
+}
+
+.releaselayer .layerwrap .releaseinfor p {
+    display: none
+}
+
+.releaselayer .layerwrap .releaseinfor .rightp {
+    text-align: center;
+    font-size: 12px;
+    color: #4a883e;
+    background-color: #eaf3e1;
+    padding: 5px 20px;
+    border: 1px solid #d2e6c8;
+    vertical-align: bottom
+}
+
+.releaselayer .layerwrap .releaseinfor .rightp .fa {
+    color: #6eaa00;
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+    vertical-align: middle
+}
+
+.releaselayer .layerwrap .releaseinfor .errorp {
+    text-align: center;
+    font-size: 12px;
+    color: #b74d46;
+    background-color: #fff0f0;
+    padding: 5px 20px;
+    border: 1px solid #ffd2d2;
+    vertical-align: bottom
+}
+
+.releaselayer .layerwrap .releaseinfor .errorp .fa {
+    color: #dc3c00;
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+    vertical-align: middle
+}
+
+.releaselayer .layerwrap .releasewrap {
+    padding: 30px 20px
+}
+
+.releaselayer .layerwrap .releasewrap p {
+    font-size: 14px;
+    color: #666
+}
+
+.releaselayer .layerwrap .releasewrap p span {
+    color: #333;
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: 700
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap {
+    margin-top: 20px
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap label {
+    color: #666;
+    font-size: 14px;
+    float: left;
+    line-height: 30px
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap label em {
+    color: #e94b4b;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap .selectbox {
+    float: left
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap .sharediv {
+    border: 1px solid #dce4eb;
+    width: 180px;
+    height: 30px;
+    float: left;
+    margin: 0 5px
+}
+
+.releaselayer .layerwrap .releasewrap .sharewrap .sharediv select {
+    background: 0 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #667a9b;
+    outline: 0
+}
+
+.releaselayer .layerwrap .releasewrap .textareabox {
+    border: 1px solid #dce4eb;
+    width: 489px;
+    height: 89px;
+    padding: 5px;
+    margin-top: 20px
+}
+
+.releaselayer .layerwrap .releasewrap .textareabox textarea {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    resize: none;
+    color: #bbb;
+    font-size: 14px
+}
+
+.releaselayer .layerwrap .releasewrap .textareabox .lightgray {
+    color: #666
+}
+
+.releaselayer .pbottom {
+    background-color: #f2f2f5;
+    height: 50px;
+    text-align: center
+}
+
+.releaselayer .pbottom a {
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 12px 5px 0 0;
+    outline: 0;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 26px
+}
+
+.releaselayer .pbottom .addbutn,.releaselayer .pbottom .seebtn {
+    background-color: #d9881f
+}
+
+.releaselayer .pbottom .resetbtn {
+    background-color: #909098
+}
+
+.releaselayer .pbottom .seebtn {
+    width: 98px
+}
+
+.releaselayer .sharewraps {
+    height: 230px;
+    padding-top: 30px
+}
+
+.inforwrap {
+    padding: 60px 0
+}
+
+.inforwrap p {
+    font-size: 14px;
+    color: #b8c3d9;
+    text-align: center;
+    margin-top: 10px
+}
+
+.inforwrap .sicons {
+    display: block;
+    text-align: center
+}
+
+.inforwrap .sicons .fa {
+    color: #dae2f2;
+    font-size: 60px
+}

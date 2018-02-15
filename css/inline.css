@@ -1,0 +1,78 @@
+#clip_button {
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+    width: 85px;
+    height: 20px;
+}
+#clip_button:hover{
+    color:#FF7F0E;
+}
+.clip-msg {
+    display: none;
+    position: relative;
+    bottom: 20px;
+    font: 12px"Helvetica Neue",Sans-Serif!important;
+    padding: 2px 4px!important;
+    border-radius: 2px!important;
+    width: auto!important;
+    box-shadow: none!important;
+    background: #FFE7C3!important;
+    color: #FF7F0E!important;
+    border: 1px solid#FFBE98!important;
+}
+.bdshare-button-style0-32 a {
+    float: none;
+    width: auto;
+    height: auto;
+    line-height: 20px;
+    background: none;
+    cursor: pointer;
+    color: #8295a3;
+    text-indent: 0;
+    margin: -1px 0 0 0;
+}
+.bd_weixin_popup {
+    height: 260px !important;
+}
+.bd_weixin_popup_foot {
+    display: none;
+}
+.stext p {
+    cursor: default;
+}
+.kn_others .kn_top .sallbtns span.share a {
+    color: #8295a3;
+    line-height: inherit !important;
+}
+.kl_spreads .share a.weibo:hover{
+    color: #f77565 !important;
+}
+.kl_spreads .share a.weixin:hover{
+    color: #55c94a !important;
+}
+.kl_spreads .share a.qzone:hover{
+    color: #ffc028 !important;
+}
+.kl_spreads{
+    width:212px;
+}
+.ernav .navs li .ahot:before{
+    line-height: 10px;
+}
+
+.wap-wrapper {
+    width:0;
+    height:0;
+    overflow: hidden;
+}
+
+.searchdefault a.resultp.search-li.selected,
+.searchdefault li.search-li.selected,
+.searchku li.tuwens.search-li.selected{
+    background-color: #eff3f5 !important;
+}
+.searchku.selected a, .searchku a.selected{
+    background-color: #eff3f5 !important;
+    color: #ea9d38 !important;
+}

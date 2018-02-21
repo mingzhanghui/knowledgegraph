@@ -944,12 +944,6 @@ a:hover {
     margin-bottom: 20px
 }
 
-.header_top .banner {
-    background: url(../images/web/newimgs/newbanner.jpg) top center no-repeat;
-    height: 165px;
-    background-size: cover;
-    width: 100%
-}
 
 .header_top .text {
     font-size: 26px;

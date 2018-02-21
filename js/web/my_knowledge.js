@@ -1,5 +1,6 @@
 /**
  * Created by mzh on 2/13/18.
+ * 我的知识库 submenu show/hide
  */
 var t = null, time = 300, _this;
 $(".my_knowledge").hover(function () {

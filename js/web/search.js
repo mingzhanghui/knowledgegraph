@@ -3,11 +3,12 @@
  */
 $(document).ready(function () {
   var pathname = location.pathname;
-  var baseId, v = $("#base_id").val(), locUrl;
+  var $baseId = $("#base_id");
+  var baseId, v = $baseId.val(), locUrl;
   if (v)  baseId = v;
   $("#nav_search_top .search-inp").val('搜索知识...');
   //站外搜索样式
-  if (!$("#base_id").val()) {
+  if (!$baseId.val()) {
     var searchContainer = $('.searchku');
     searchContainer.find('.resultp').css('display', 'block');
     searchContainer.find('.hotsearchall').css('display', 'block');

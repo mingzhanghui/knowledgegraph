@@ -1,0 +1,137 @@
+/* colors */
+.addcolor .r36 a:hover {
+    color: #54619a !important;
+}
+
+.addcolor .r13 a:hover {
+    color: #437b99 !important;
+}
+
+.addcolor .r17 a:hover {
+    color: #76aac6  !important;
+}
+
+.addcolor .r12 a:hover {
+    color: #5c93b0 !important;
+}
+
+.addcolor .r15 a:hover {
+    color: #97c024 !important;
+}
+
+.knowledgestructmap .textfor{
+    margin: 25px 30px 0;
+    padding: 8px 20px;
+    font-size: 12px;
+    color: #688ca1;
+    background-color: #d7eefb;
+    position: relative;
+    top: -15px;
+}
+.knowledgestructmap .selectab {
+    padding-top:10px;
+}
+.myknowledgestruct .textfor {
+    padding: 8px 20px;
+    position: relative;
+    top: -15px;
+}
+
+/* SEARCH */
+.searchdefault a.resultp.search-li.selected,
+.searchdefault li.search-li.selected,
+.searchku li.tuwens.search-li.selected {
+    background-color: #eff3f5 !important;
+}
+
+.searchku.selected a, .searchku a.selected{
+    background-color: #eff3f5 !important;
+    color: #ea9d38 !important;
+}
+
+/* text info */
+.textfor {
+    font-size: 12px;
+    color: #688ca1;
+    background-color: #d7eefb;
+    padding: 8px 20px;
+    top: -15px;
+}
+
+.textfor a {
+    color:#159ede;
+    margin-left: 5px;
+}
+
+/*struct list*/
+.listbox .boxphoto > img {
+    width: 100px;
+    height: 86px;
+}
+
+/* sidebar */
+.c36 a:hover {
+    color: #54619a !important;
+}
+
+.c13 a:hover {
+    color: #437b99 !important;
+}
+
+.c17 a:hover {
+    color: #76aac6  !important;
+}
+
+.c12 a:hover {
+    color: #5c93b0 !important;
+}
+
+.c15 a:hover {
+    color: #97c024 !important;
+}
+
+.emailcontent .bottomtext span{
+    display: none;
+}
+.emailcontent .emailmsg{
+    color: #FF4700;
+    display: none;
+}
+.rneWrapTop p a{
+    color: #159ede;
+    display: inline-block;
+    background: none !important;
+    text-align: right;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+    border: none;
+    line-height: 18px;
+    height: 18px;
+}
+.rneWrapTop p a i{
+    margin-left:5px;
+}
+.shake {
+    border: 1px solid #ecac60 !important;
+    background: #ffead7;
+    color: #d5964b;
+}
+input.shake{background:#ffead7;}
+
+.rightcontents .avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.divlist04 > ul.list04 > li img {
+    width: 50px;
+    height: 50px;
+}
+
+.follow em {
+    padding-right: .5em;
+}
+
+.follow em:last-child {
+    margin-left: 2em;
+}

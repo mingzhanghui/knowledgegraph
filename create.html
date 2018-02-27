@@ -3,8 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>新建知识图谱</title>
+    <link href="./images/web/favicon.ico" rel="SHORTCUT ICON">
+    <!--css lib-->
+    <link rel="stylesheet" href="./public/common/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/web/font-awesome.min.css">
+    <!--css common-->
+    <link rel="stylesheet" href="./public/themes/default/css/common.css">
+    <link rel="stylesheet" href="./public/themes/default/css/icon.css">
+    <link rel="stylesheet" href="./css/kn_follow_dynamic.css">
+    <link rel="stylesheet" href="./css/web/kn_knowledge_create.css">
+    <!-- css 我的图谱列表页 -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/create.css">
 </head>
 <body>
 <!--@ref: http://lib.csdn.net/my/create/structure-->
+<div id="J_nav"></div>
+
+<div class="mainCol padding15px">
+    <!--新建知识图谱-->
+    <div class="kn_left w860px whitebk">
+        <!--knowledge graph nav-->
+        <div class="htitle clearfix kn_title">
+            <a href="index.html"><span class="cur">我的图谱</span></a>
+            <em class="normals">&gt;</em>
+            <span class="normals">新建知识图谱</span>
+            <a href="http://lib.csdn.net/guide/structure" class="pull-right" target="_blank">查看使用帮助<i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="createdoms">
+            <div class="mapwrap mapname">
+                <label>图谱名称(限20字符)：</label>
+                <div class="inputmap">
+                    <input type="text" placeholder="输入个人知识图谱名称" maxlength="20">
+                </div>
+            </div>
+            <div class="mapwrap mapdesc">
+                <label>图谱说明(选填)：</label>
+                <div class="inputmap">
+                    <input placeholder="输入个人知识图谱说明" maxlength="100">
+                </div>
+            </div>
+            <div class="mapwrap">
+                <label>图谱节点(限40字节)：<em>最多可以添加三级节点</em></label>
+                <div class="createdom">
+                    <div class="allwrap clearfix">
+                        <div class="editop"><a href="javascript:" class="aplus createNewDom"><i class="fa fa-plus"></i></a><a href="javascript:" class="atrash delDom atagbtn"><i class="fa fa-trash"></i></a></div>
+                        <div class="inputmap">
+                            <input placeholder="输入节点名称" maxlength="40">
+                        </div>
+                    </div>
+                    <ul class="mapdom"></ul>
+                </div>
+                <p class="createtext">
+                    <span class="sblank"></span>
+                    <a href="javascript:" class="createNewDom"><i class="fa fa-plus"></i>一级节点</a>
+                </p>
+                <div class="submitdiv">
+                    <a href="javascript:" class="bc addsub addnew">创建知识图谱</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--right - sidebar-->
+    <div class="kn_right w270px" id="J_sidebar"></div>
+</div>
+<script src="./js/web/libs/jquery-1.11.1.js"></script>
+<script>
+    $("#J_nav").load("./public/html/nav.html");
+    $("#J_sidebar").load("./public/html/sidebar.html");
+</script>
+<script src="./public/footer/js/public_footer-1.0.2.js"></script>
+<!--我的知识库 submenu dropdown-->
+<script type="text/javascript" src="./js/web/my_knowledge.js"></script>
+<script src="./js/web/libs/bootstrap.min.js"></script>
+<script src="./min/knowledge_base_new.js"></script>
 </body>
 </html>

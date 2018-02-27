@@ -1,0 +1,28 @@
+{
+  "treedata": {
+    "title": "vue.js",
+    "description": "runoob vue.js tutorial",
+    "status": true,
+    "dom": [{
+      "title": "Vue.js 安装",
+      "status": true,
+      "dom": [{
+        "title": "1、独立版本",
+        "status": true,
+        "dom": [{
+          "title": "<a class=\"download\" href=\"http://vuejs.org/js/vue.min.js\" download=\"\" target=\"_blank\" rel=\"external\">下载 Vue.js</a>",
+          "status": true
+        }]
+      }, {
+        "title": "2、使用 CDN 方法",
+        "status": true
+      }, {
+        "title": "3、NPM 方法",
+        "status": true
+      }]
+    }, {
+      "title": "Vue.js 目录结构",
+      "status": true
+    }]
+  }
+}

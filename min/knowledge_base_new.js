@@ -33,7 +33,8 @@
                                 delrubbishurl: "/ajax/deleteNode",
                                 releaseurl: "/my/structure/share",
                                 deletedomurl: "/ajax/deleteStructure",
-                                addtreedataurl: "/ajax/createStructure",
+                                // addtreedataurl: "/ajax/createStructure",
+                                addtreedataurl: "./data/ajax/createStructureResponse.json",
                                 edittreedataurl: "/ajax/handleStructure",
                                 suburl: "/subContent",
                                 importUrl: "/ajax/importArticle",
@@ -932,7 +933,8 @@
                                             },
                                             success: function (e) {
                                                 var t;
-                                                t = e.status, t ? n.hasClass("addnew") ? (window.location.href = "/my/structure/" + encodeURIComponent(e.title), window.location.href = "/my/structure/" + encodeURIComponent(e.title)) : n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ? $(".struct-url").attr("href") : window.location) : alert(e.err)
+                                                // t = e.status, t ? n.hasClass("addnew") ? (window.location.href = "/my/structure/" + encodeURIComponent(e.title), window.location.href = "/my/structure/" + encodeURIComponent(e.title)) : n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ? $(".struct-url").attr("href") : window.location) : alert(e.err)
+                                                t = e.status, t ? n.hasClass("addnew") ? (window.location.href = "index.html" + encodeURIComponent(e.title), window.location.href = "/my/structure/" + encodeURIComponent(e.title)) : n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ? $(".struct-url").attr("href") : window.location) : alert(e.err)
                                             },
                                             error: function () {
                                                 throw "服务器请求失败！"

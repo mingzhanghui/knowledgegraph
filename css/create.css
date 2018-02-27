@@ -1,0 +1,16 @@
+.kn_title a.pull-right{
+    color:#159ede;
+}
+.kn_title a i{
+    margin-left:5px;
+}
+.knillustwrap{
+    cursor: default;
+}
+.knillcontent .knillnei .kntable table tbody tr td a{
+    color:#666;
+}
+.knillcontent .knillnei .kntable table tbody tr td a:hover{
+    /*color:#333;*/
+    color:#159ede;
+}

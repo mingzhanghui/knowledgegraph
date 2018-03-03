@@ -368,16 +368,16 @@
                             d = r % 2 == 0 ? r / 2 - 1 : Math.floor(r / 2);
                         l.on("click", function (e) {
                             return c >= 0 ? (c = 0, !1) : (c++, s.removeClass("rootspan"), s.eq(-c).addClass("rootspan"), $(t).stop().animate({
-                                    left: 2 * a * c
-                                }, "slow", function () {
-                                    c >= 0 && l.removeClass("root"), o.addClass("root")
-                                }), e.stopPropagation(), !1)
+                                left: 2 * a * c
+                            }, "slow", function () {
+                                c >= 0 && l.removeClass("root"), o.addClass("root")
+                            }), e.stopPropagation(), !1)
                         }), o.on("click", function (e) {
                             return --c < -d ? (c = -d, !1) : (s.removeClass("rootspan"), s.eq(-c).addClass("rootspan"), $(t).stop().animate({
-                                    left: 2 * a * c
-                                }, "slow", function () {
-                                    c <= -d && o.removeClass("root"), l.addClass("root")
-                                }), e.stopPropagation(), !1)
+                                left: 2 * a * c
+                            }, "slow", function () {
+                                c <= -d && o.removeClass("root"), l.addClass("root")
+                            }), e.stopPropagation(), !1)
                         }), $(t).width(a * r)
                     },
                     _scrollBar: function () {
@@ -419,20 +419,20 @@
                     _searchBar: function () {
                         function e(e) {
                             e >= d && (1 == l ? (i.stop(), i.css({
-                                    position: "absolute",
-                                    left: 0,
-                                    top: 0,
-                                    opacity: 1
-                                }), h = !1, clearTimeout(f), f = null) : (i.css({
-                                    position: "fixed",
-                                    right: p,
-                                    top: 12,
-                                    left: "auto"
-                                }), h || (i.css({
-                                    opacity: 0
-                                }), i.stop().animate({
-                                    opacity: 1
-                                }, "slow"), h = !0)))
+                                position: "absolute",
+                                left: 0,
+                                top: 0,
+                                opacity: 1
+                            }), h = !1, clearTimeout(f), f = null) : (i.css({
+                                position: "fixed",
+                                right: p,
+                                top: 12,
+                                left: "auto"
+                            }), h || (i.css({
+                                opacity: 0
+                            }), i.stop().animate({
+                                opacity: 1
+                            }, "slow"), h = !0)))
                         }
 
                         function t(e, t) {
@@ -470,16 +470,16 @@
                             f = null,
                             p = (parseFloat($(g).width(), 10) - 1170) / 2 + 15;
                         l ? ($(g).off("scroll"), h = !1) : $(g).on("scroll", function () {
-                                if (clearTimeout(f), f = null, (r = parseFloat($(g).scrollTop(), 10)) < d) return i.stop(), i.css({
-                                    position: "absolute",
-                                    left: 0,
-                                    top: 0,
-                                    opacity: 1
-                                }), h = !1, !1;
-                                f = setTimeout(function () {
-                                    r = parseFloat($(g).scrollTop(), 10), e(r)
-                                }, 100)
-                            }), $(window).on("resize", function () {
+                            if (clearTimeout(f), f = null, (r = parseFloat($(g).scrollTop(), 10)) < d) return i.stop(), i.css({
+                                position: "absolute",
+                                left: 0,
+                                top: 0,
+                                opacity: 1
+                            }), h = !1, !1;
+                            f = setTimeout(function () {
+                                r = parseFloat($(g).scrollTop(), 10), e(r)
+                            }, 100)
+                        }), $(window).on("resize", function () {
                             p = (parseFloat($(g).width(), 10) - 1170) / 2 + 15, e(r)
                         }), o = i.find("input[type='text']"), s = i.find(".searchbtn"), c = i.find(".search_list");
                         var m, v, b, y, k, w, _, x, C = !!c.find(".totalr").length;
@@ -571,14 +571,14 @@
                                     success: function (e) {
                                         var t;
                                         t = e.status, t ? (l.parents(".windowLayer").find(".closec").trigger("click"), 2 == o ? n.elm.addClass("ysharebtn csuccess").removeClass("collectbtn").find("i").addClass("fa-star").removeClass("fa-star-o") : 3 != o && n.elm.addClass("ysharebtn").removeClass("collectbtn").find("em").text("已收藏"), 3 != o && ($(n.elm).off("click"), csdn.knowledge_web._navAttention && !csdn.knowledge_web._navAttention.flg && g.csdn.knowledge_web._navAttention(!0), n._This._layer({
-                                                tag: ".collectcancel",
-                                                triggerbtn: n.elm,
-                                                parentag: ".dynamicollect",
-                                                fn: n._This._cancelCollect,
-                                                beforefun: function () {
-                                                    return n._This._verificaUser()
-                                                }
-                                            }))) : 1 == e.error ? window.location = "https://passport.csdn.net/account/login?backurl=" + encodeURI(location.href) : alert(e.error)
+                                            tag: ".collectcancel",
+                                            triggerbtn: n.elm,
+                                            parentag: ".dynamicollect",
+                                            fn: n._This._cancelCollect,
+                                            beforefun: function () {
+                                                return n._This._verificaUser()
+                                            }
+                                        }))) : 1 == e.error ? window.location = "https://passport.csdn.net/account/login?backurl=" + encodeURI(location.href) : alert(e.error)
                                     },
                                     error: function () {
                                     }
@@ -697,22 +697,22 @@
                         var n, a, r, i, l = !1,
                             o = this;
                         return "function" == typeof e ? (t = e, e = null, t()) : (n = e.treetag || "no", a = e.tag || "no", r = e.beforefun ||
-                                function () {
-                                    return !1
-                                }, i = e.afterfun ? (aftercall = t, t = null, e.afterfun) : (aftercall = null, t), "no" == n ? (alert("请设置treebox"), !1) : "no" == a ? (alert("请设置点击tag"), !1) : (r && r({
-                                        elm: $(a),
-                                        _This: o
-                                    }), void $(a).on("click", function (e) {
-                                        if (l = l || r()) return !1;
-                                        var t = {
-                                            isby: l,
-                                            elm: $(this),
-                                            eventobj: $(e.target),
-                                            optobj: $(this),
-                                            _This: o
-                                        };
-                                        return aftercall && (t.aftercall = aftercall), i(t), e.preventDefault(), e.stopPropagation(), !1
-                                    })))
+                            function () {
+                                return !1
+                            }, i = e.afterfun ? (aftercall = t, t = null, e.afterfun) : (aftercall = null, t), "no" == n ? (alert("请设置treebox"), !1) : "no" == a ? (alert("请设置点击tag"), !1) : (r && r({
+                            elm: $(a),
+                            _This: o
+                        }), void $(a).on("click", function (e) {
+                            if (l = l || r()) return !1;
+                            var t = {
+                                isby: l,
+                                elm: $(this),
+                                eventobj: $(e.target),
+                                optobj: $(this),
+                                _This: o
+                            };
+                            return aftercall && (t.aftercall = aftercall), i(t), e.preventDefault(), e.stopPropagation(), !1
+                        })))
                     },
                     _other: function () {
                         function e(e) {
@@ -869,14 +869,20 @@
                                 }
 
                                 var d;
-                                if (!$.trim($(".createdoms .mapname .inputmap input").val())) return o($(".createdoms .mapname .inputmap"), {
+                                // 图谱名称
+                                // <input placeholder="输入个人知识图谱名称" maxlength="20">
+                                if (!$.trim($(".createdoms .mapname .inputmap input").val()))
+                                    return o($(".createdoms .mapname .inputmap"), {
                                     text: "图谱名称不能为空",
                                     tag: "errorinfor"
                                 }, !0), !1;
+
                                 if (o($(".createdoms .mapname .inputmap"), {
                                         text: "",
                                         tag: "errorinfor"
-                                    }, !1), l.title = $.trim($(".createdoms .mapname .inputmap input[type=text]").val()), l.description = $.trim($(".createdoms .mapdesc .inputmap input[type=text]").val()), l.nid = $(".createdoms .mapname .inputmap input[type=text]").data("baseid") || $(".createdoms .mapname .inputmap input[type=text]").attr("data-baseid") || unf, l.status = $(".createdoms .mapname .inputmap input[type=text]").data("status") || $(".createdoms .mapname .inputmap input[type=text]").attr("data-status") || unf, r.each(function (e, t) {
+                                    }, !1),
+                                        l.title = $.trim($(".createdoms .mapname .inputmap input[type=text]").val()),
+                                        l.description = $.trim($(".createdoms .mapdesc .inputmap input[type=text]").val()), l.nid = $(".createdoms .mapname .inputmap input[type=text]").data("baseid") || $(".createdoms .mapname .inputmap input[type=text]").attr("data-baseid") || unf, l.status = $(".createdoms .mapname .inputmap input[type=text]").data("status") || $(".createdoms .mapname .inputmap input[type=text]").attr("data-status") || unf, r.each(function (e, t) {
                                         var n;
                                         if (n = $(t).children(".allwrap").find("input[type=text]"), $.trim(n.val())) return d = !0, !1;
                                         d = !1
@@ -884,12 +890,12 @@
                                         var n, a;
                                         n = $(t).children(".allwrap").find("input[type=text]"), (a = $.trim(n.val())) && i.push(n.closest(".createdom"))
                                     }), d ? o($(".createdoms .mapwrap").not(".mapname").children(".createtext").find(".sblank"), {
-                                            text: "",
-                                            tag: "errorinfor"
-                                        }, !1) : o($(".createdoms .mapwrap").not(".mapname").children(".createtext").find(".sblank"), {
-                                            text: "图谱节点至少填写一个",
-                                            tag: "errorinfor"
-                                        }, !0), i.length > 0) {
+                                        text: "",
+                                        tag: "errorinfor"
+                                    }, !1) : o($(".createdoms .mapwrap").not(".mapname").children(".createtext").find(".sblank"), {
+                                        text: "图谱节点至少填写一个",
+                                        tag: "errorinfor"
+                                    }, !0), i.length > 0) {
                                     for (var u = 0, h = i.length; u < h; u++) {
                                         var f;
                                         if (f = $(i[u]).children(".allwrap").find("input[type=text]"), f.length > 0) {
@@ -921,26 +927,35 @@
                                     o($(".createdoms .mapwrap").not(".mapname").children(".createtext").find(".sblank"), {
                                         text: "",
                                         tag: "errorinfor"
-                                    }, !1), function (t, n) {
-                                        var a;
-                                        n.hasClass("addnew") ? a = e.urls.addtreedataurl : n.hasClass("addedit") && (a = e.urls.edittreedataurl), $.ajax({
-                                            url: a,
-                                            type: "post",
-                                            async: !0,
-                                            dataType: "json",
-                                            data: {
-                                                treedata: JSON.stringify(t)
-                                            },
-                                            success: function (e) {
-                                                var t;
-                                                // t = e.status, t ? n.hasClass("addnew") ? (window.location.href = "/my/structure/" + encodeURIComponent(e.title), window.location.href = "/my/structure/" + encodeURIComponent(e.title)) : n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ? $(".struct-url").attr("href") : window.location) : alert(e.err)
-                                                t = e.status, t ? n.hasClass("addnew") ? (window.location.href = "index.html" + encodeURIComponent(e.title), window.location.href = "/my/structure/" + encodeURIComponent(e.title)) : n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ? $(".struct-url").attr("href") : window.location) : alert(e.err)
-                                            },
-                                            error: function () {
-                                                throw "服务器请求失败！"
-                                            }
-                                        })
-                                    }(l, t)
+                                    }, !1),
+                                        /* create knowledge graph 创建知识图谱 */
+                                        function (data, n) {
+                                            alert(JSON.stringify(data));
+
+                                            var u;
+                                            n.hasClass("addnew") ? u = e.urls.addtreedataurl : n.hasClass("addedit") && (u = e.urls.edittreedataurl),
+                                                $.ajax({
+                                                    url: u,
+                                                    type: "post",
+                                                    async: !0,
+                                                    dataType: "json",
+                                                    data: {
+                                                        treedata: JSON.stringify(data)
+                                                    },
+                                                    success: function (e) {
+                                                        var t;
+                                                        t = e.status, t ? n.hasClass("addnew") ?
+                                                            (window.location.href = "/my/structure/" + encodeURIComponent(e.title),
+                                                                 window.location.href = "/my/structure/" + encodeURIComponent(e.title)) :
+                                                            n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ?
+                                                            $(".struct-url").attr("href") : window.location) : alert(e.err)
+                                                    },
+                                                    error: function () {
+                                                        console.log(n);   // $("<a class='bc addsub addnew'>")
+                                                        throw "服务器请求失败！"
+                                                    }
+                                                })
+                                        }(l, t)   // l?
                                 }
                             }()
                         }
@@ -1306,14 +1321,19 @@
                                 return isNaN(e) && (e = unf), t == unf && (t = unf), i($(this), e, t), !1
                             }), $(".deletemaplayerall .closec,.deletemaplayerall .cancelbtn,.deletemaplayersimple .closec,.deletemaplayersimple .cancelbtn").on("mouseup", function (e) {
                                 1 === Number(e.which, 10) && $(".marklayer").hide()
-                            })), $(".mapwrap .submitdiv .addsub").length > 0 && (!
-                                function () {
+                            })),
+                            $(".mapwrap .submitdiv .addsub").length > 0 && (
+                                !function () {
                                     $(".createdoms .mapwrap input[type=text]").length > 0 && $(".createdoms").on("change", ".mapwrap input[type=text]", function () {
                                         $(this).attr("data-status", "true")
                                     })
-                                }(), $(".mapwrap .submitdiv .addsub").on("click", function () {
-                                return l(f, $(this)), !1
-                            })), $("#soliderMain").length > 0 && this._solider(), $("#colsolider3").length > 0 && this._scrollTabMove({
+                                }(),
+                                /* 点击创建图谱 */
+                                $(".mapwrap .submitdiv .addsub").on("click", function () {
+                                    return l(f, $(this)), !1
+                                })
+                            ),
+                            $("#soliderMain").length > 0 && this._solider(), $("#colsolider3").length > 0 && this._scrollTabMove({
                                 movetag: "#ulmove3",
                                 leftbtn: ".leftbtn",
                                 rightbtn: ".rightbtn",
@@ -1362,30 +1382,30 @@
                                         u(".kn_importlist .selectcheck");
                                         var t = $("#_klg").val();
                                         return !!/^\+?[1-9][0-9]*$/.test(t) && ($.ajax({
-                                                url: e._This.urls.importUrl,
-                                                async: !0,
-                                                type: "POST",
-                                                dataType: "json",
-                                                data: {
-                                                    data: $("#checkvalues").val(),
-                                                    id: t
-                                                },
-                                                success: function (e) {
-                                                    var t = e.status;
-                                                    if ($(".pinfort span").html(""), t) $(".pinfort").addClass("successinfor").find("span").html('<i class="fa fa-check-circle"></i>导入成功,' + e.succ + "条成功" + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""));
-                                                    else {
-                                                        var n = e.errcode;
-                                                        if (1 == n) {
-                                                            var a = "https://passport.csdn.net/account/login?from=" + encodeURI(location.href);
-                                                            window.location = a
-                                                        } else 2 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>不是最末级节点') : 3 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>尚未选择内容') : $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>导入失败,' + (e.succ ? " " + e.succ + "条成功" : "") + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""))
-                                                    }
-                                                    $(".pinfort").removeClass("hide")
-                                                },
-                                                error: function (e) {
-                                                    console.log("服务器错误")
+                                            url: e._This.urls.importUrl,
+                                            async: !0,
+                                            type: "POST",
+                                            dataType: "json",
+                                            data: {
+                                                data: $("#checkvalues").val(),
+                                                id: t
+                                            },
+                                            success: function (e) {
+                                                var t = e.status;
+                                                if ($(".pinfort span").html(""), t) $(".pinfort").addClass("successinfor").find("span").html('<i class="fa fa-check-circle"></i>导入成功,' + e.succ + "条成功" + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""));
+                                                else {
+                                                    var n = e.errcode;
+                                                    if (1 == n) {
+                                                        var a = "https://passport.csdn.net/account/login?from=" + encodeURI(location.href);
+                                                        window.location = a
+                                                    } else 2 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>不是最末级节点') : 3 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>尚未选择内容') : $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>导入失败,' + (e.succ ? " " + e.succ + "条成功" : "") + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""))
                                                 }
-                                            }), !1)
+                                                $(".pinfort").removeClass("hide")
+                                            },
+                                            error: function (e) {
+                                                console.log("服务器错误")
+                                            }
+                                        }), !1)
                                     }), $(".kn_importlist .page a").on("click", function () {
                                         var e, n, a, r, i, l;
                                         if ($(this).hasClass("previous") && (e = -1), $(this).hasClass("next") && (e = 1), a = $(".kn_importlist .tab a.root").index(), n = $(".kn_importlist .tab a.root").data("id") || $(".kn_importlist .tab a.root").attr("data-id"), r = $(".kn_importlist .tabcontent ul").eq(a), i = parseFloat($(r).find(".page").val(), 10), l = parseFloat($(r).find(".total_page").val(), 10), i + e <= 0 || i + e > l) return $(this).removeClass("root"), !1;
@@ -1529,9 +1549,9 @@
                                 l = e.parent().next(".selectput").find("select"),
                                 o = new RegExp(n + "-\\d+", "i");
                             l.length > 0 && l.html(""), r && (a = $("." + r).find("option")), 0 == n ? i += '<option data-id="0" selected="selected">请选择节点</option>' : a && a.length > 0 && a.each(function (e, t) {
-                                    var n = $(t).attr("data-id");
-                                    o.test(n) && (i += t.outerHTML)
-                                }), l.length > 0 && (l.html(i), t(l, l.parent().find("option:selected").attr("data-id")))
+                                var n = $(t).attr("data-id");
+                                o.test(n) && (i += t.outerHTML)
+                            }), l.length > 0 && (l.html(i), t(l, l.parent().find("option:selected").attr("data-id")))
                         }
 
                         function n() {
@@ -1565,16 +1585,16 @@
                                 success: function (e) {
                                     var t, n;
                                     t = e.status, n = e.html, t ? ($(".kn_sub_collect .layerwrap").html(""), $(".kn_sub_collect .layerwrap").html(n), l._layer({
-                                            tag: ".kn_sub_collect ",
-                                            triggerbtn: ".confrimAdd",
-                                            parentag: ".pbtns",
-                                            fn: function (e) {
-                                                $(".marklayer").css("height", $(doc).height()).show(), $(".confrimAdd").off("click", e.funame)
-                                            },
-                                            beforefun: function () {
-                                                return l._verificaUser()
-                                            }
-                                        }), $(".confrimAdd").trigger("click"), e.mask_node && l._fixedlayer("finished"), e.mask_base && l._fixedlayer("lighted")) : e.error ? l._verificaUser() : alert(e.err)
+                                        tag: ".kn_sub_collect ",
+                                        triggerbtn: ".confrimAdd",
+                                        parentag: ".pbtns",
+                                        fn: function (e) {
+                                            $(".marklayer").css("height", $(doc).height()).show(), $(".confrimAdd").off("click", e.funame)
+                                        },
+                                        beforefun: function () {
+                                            return l._verificaUser()
+                                        }
+                                    }), $(".confrimAdd").trigger("click"), e.mask_node && l._fixedlayer("finished"), e.mask_base && l._fixedlayer("lighted")) : e.error ? l._verificaUser() : alert(e.err)
                                 },
                                 error: function () {
                                 }
@@ -1636,10 +1656,10 @@
                         return a = e.parentTag || "", r = e.movetag || "", i = e.leftbtn || "", l = e.rightbtn || "", s = e.spacing || 0, c = e.root || "", o = e.num || 1, p = e.curnumber || 1, !($(a).length < 0 || $(r, a).length <= 0) && (m = $(r, a).children(), h = d = m.size(), $(r, a).css({
                             width: (m.eq(0).outerWidth() + 2 * s) * d
                         }), d <= p || o > p ? ($(l, a).attr("href", "javascript:void(0)").removeClass(c), $(i, a).attr("href", "javascript:void(0)"), !1) : void($(i, a).length > 0 && $(l, a).length > 0 && (c && $(l, a).addClass(c), $(i, a).on("click", function () {
-                                return t("left", $(this)), !1
-                            }), $(l, a).on("click", function () {
-                                return t("right", $(this)), !1
-                            }))))
+                            return t("left", $(this)), !1
+                        }), $(l, a).on("click", function () {
+                            return t("right", $(this)), !1
+                        }))))
                     },
                     _solider: function () {
                         !
@@ -1736,12 +1756,12 @@
                             var n;
                             e.on("blur", function () {
                                 n = $.trim($(this).val()), n.length <= 0 ? $(this).hasClass("urls") ? $(this).next(".error").html("链接不能为空").css({
-                                            display: "block"
-                                        }) : $(this).next(".error").html("标题不能为空").css({
-                                            display: "block"
-                                        }) : $(this).hasClass("urls") ? t.test(n) ? $(this).next(".error").html("链接不能为空").hide() : $(this).next(".error").html("请输入有效的URL地址").css({
-                                                display: "block"
-                                            }) : $(this).next(".error").hide()
+                                    display: "block"
+                                }) : $(this).next(".error").html("标题不能为空").css({
+                                    display: "block"
+                                }) : $(this).hasClass("urls") ? t.test(n) ? $(this).next(".error").html("链接不能为空").hide() : $(this).next(".error").html("请输入有效的URL地址").css({
+                                    display: "block"
+                                }) : $(this).next(".error").hide()
                             })
                         }())
                     },
@@ -1952,12 +1972,12 @@
                                         n = $(this).parent().children(".subc").html(),
                                         a = $(this).attr("data-id");
                                     return !t[0].tag && (t.addClass("root"), r._opdate({
-                                            text: n,
-                                            id: a
-                                        }, function () {
-                                            t.attr("data-id");
-                                            t[0].tag = !0, r._scrollBar()
-                                        }), e.stopPropagation(), e.preventDefault(), !1)
+                                        text: n,
+                                        id: a
+                                    }, function () {
+                                        t.attr("data-id");
+                                        t[0].tag = !0, r._scrollBar()
+                                    }), e.stopPropagation(), e.preventDefault(), !1)
                                 }
 
                                 var t, n = $(".listselect") || unf,
@@ -2021,14 +2041,14 @@
                                     o = "",
                                     s = "";
                                 n = a.length > 0 && r.length > 0 && i.length > 0 ? $(a + r).length > 0 ?
-                                        function (e, t) {
-                                            if ("string" === (typeof e).toLowerCase() && (e = $(e)), 2 != l.length) return n = new Error("添加hover参数有误！");
-                                            o = l[0], s = l[1], e.hover(function () {
-                                                o.length > 0 && $(this).find(o).addClass(s), $(this).find(t).show()
-                                            }, function () {
-                                                o.length > 0 && $(this).find(o).removeClass(s), $(this).find(t).hide()
-                                            })
-                                        }($(a + r), i) : new Error("操作的目标父亲标注!") : new Error("缺少操作对象，请添加"), t && t(n)
+                                    function (e, t) {
+                                        if ("string" === (typeof e).toLowerCase() && (e = $(e)), 2 != l.length) return n = new Error("添加hover参数有误！");
+                                        o = l[0], s = l[1], e.hover(function () {
+                                            o.length > 0 && $(this).find(o).addClass(s), $(this).find(t).show()
+                                        }, function () {
+                                            o.length > 0 && $(this).find(o).removeClass(s), $(this).find(t).hide()
+                                        })
+                                    }($(a + r), i) : new Error("操作的目标父亲标注!") : new Error("缺少操作对象，请添加"), t && t(n)
                             }
                         }
                     },
@@ -2037,17 +2057,17 @@
                             var n, a, r, i, l = $(this).attr("data-layer-id") || "",
                                 o = $(this).attr("data-type") || 0;
                             return n = $(".treewindowLayer") || "", a = $(".marklayer") || "", n.length <= 0 || a.length <= 0 ? (alert("请添加弹框的DOM格式"), !1) : a.length > 1 || n.length > 1 ? (alert("弹框和遮罩请唯一"), !1) : (r = l || "", n.attr({
-                                        id: "treewindowLayer" + l,
-                                        "data-id": r,
-                                        "data-type": o
-                                    }), $("#treewindowLayer" + l).show(), a.css({
-                                        height: parseFloat($(doc).height(), 10) > parseFloat($(g).height(), 10) ? parseFloat($(doc).height(), 10) : parseFloat($(g).height(), 10)
-                                    }).show(), $(".closec").off("click"), $(".closec").on("click", function (e) {
-                                        return $("#treewindowLayer" + l).hide(), ($(".tagcgl").length > 0 || $(".treerlist").length > 0) && $(doc).off("click", ".treeMenu li a"), a.hide(), e.stopPropagation(), e.preventDefault(), !1
-                                    }), i = {
-                                        tagobj: $(this),
-                                        windowLayerid: "treewindowLayer" + l
-                                    }, e && e(i), t.stopPropagation(), t.preventDefault(), !1)
+                                id: "treewindowLayer" + l,
+                                "data-id": r,
+                                "data-type": o
+                            }), $("#treewindowLayer" + l).show(), a.css({
+                                height: parseFloat($(doc).height(), 10) > parseFloat($(g).height(), 10) ? parseFloat($(doc).height(), 10) : parseFloat($(g).height(), 10)
+                            }).show(), $(".closec").off("click"), $(".closec").on("click", function (e) {
+                                return $("#treewindowLayer" + l).hide(), ($(".tagcgl").length > 0 || $(".treerlist").length > 0) && $(doc).off("click", ".treeMenu li a"), a.hide(), e.stopPropagation(), e.preventDefault(), !1
+                            }), i = {
+                                tagobj: $(this),
+                                windowLayerid: "treewindowLayer" + l
+                            }, e && e(i), t.stopPropagation(), t.preventDefault(), !1)
                         })
                     },
                     ajaxDelete: function () {
@@ -2145,8 +2165,8 @@
                                     }, null, "doyes"), n(i.elm)), "recommend" == a[0].toLocaleLowerCase()) {
                                     var l, s, c;
                                     $(".optrecord").hide(), i.elm[0].recordid.length > 0 ? ($(".optrecommend").find(":radio").removeAttr("checked"), $(".optrecommend").find(":radio").eq(i.elm[0].recordid[0].substring(i.elm[0].recordid[0].indexOf("|") + 1, i.elm[0].recordid[0].length))[0].checked = !0) : ($(".optrecommend").find(":radio").removeAttr("checked"), $(".optrecommend").find(":radio").each(function () {
-                                            $(this).attr("data-checkid") == i.elm.attr("recommend") && i.elm.attr("recommend") > 0 && ($(this)[0].checked = !0)
-                                        }), l = $(".optrecommend").find(":radio:checked"), l.length > 0 ? (s = $(".optrecommend").find(":radio:checked").attr("data-checkid"), c = $(".optrecommend").find(":radio:checked").parent().index(), i.elm[0].recordid = [], i.elm[0].recordid.push(s + "|" + c)) : $(".optrecommend").find(":radio").removeAttr("checked")), t(function (t) {
+                                        $(this).attr("data-checkid") == i.elm.attr("recommend") && i.elm.attr("recommend") > 0 && ($(this)[0].checked = !0)
+                                    }), l = $(".optrecommend").find(":radio:checked"), l.length > 0 ? (s = $(".optrecommend").find(":radio:checked").attr("data-checkid"), c = $(".optrecommend").find(":radio:checked").parent().index(), i.elm[0].recordid = [], i.elm[0].recordid.push(s + "|" + c)) : $(".optrecommend").find(":radio").removeAttr("checked")), t(function (t) {
                                         e(r, {
                                             id: i.id,
                                             checkids: t,
@@ -2170,28 +2190,28 @@
                                 var a = e,
                                     r = a.html;
                                 a.status ? ($(t).parent().siblings().removeClass("root"), $(t).parent().addClass("root"), n.html(""), n.html($(r)), i.funblock()._hover({
-                                        _optag: ".rightset .listcontents",
-                                        _tag: ">li",
-                                        _targetag: ".cancelgz",
-                                        _hoveAddropt: [".leftc a", "root"]
-                                    }, function (e) {
-                                        "object" === (typeof e).toLowerCase() ? alert(e.message) : $(".cancelgz").on("click", function (e) {
-                                                var t = $(this).attr("data-status"),
-                                                    n = [],
-                                                    a = $(this);
-                                                return $(this).parents("li").find(".leftc a").each(function (e, t) {
-                                                    n[e] = $(t).attr("data-pid")
-                                                }), n.push(t), i.funblock()._ajax({
-                                                    _id: n,
-                                                    _url: i.urls.attentionurl
-                                                }, function (e) {
-                                                    var t = e,
-                                                        n = t.status,
-                                                        r = t.isatten;
-                                                    n && (!1 === r ? a.html("关注") : a.html("取消关注"), a.attr("data-status", r))
-                                                }), e.stopPropagation(), e.preventDefault(), !1
-                                            })
-                                    })) : alert("请求数据返回失败")
+                                    _optag: ".rightset .listcontents",
+                                    _tag: ">li",
+                                    _targetag: ".cancelgz",
+                                    _hoveAddropt: [".leftc a", "root"]
+                                }, function (e) {
+                                    "object" === (typeof e).toLowerCase() ? alert(e.message) : $(".cancelgz").on("click", function (e) {
+                                        var t = $(this).attr("data-status"),
+                                            n = [],
+                                            a = $(this);
+                                        return $(this).parents("li").find(".leftc a").each(function (e, t) {
+                                            n[e] = $(t).attr("data-pid")
+                                        }), n.push(t), i.funblock()._ajax({
+                                            _id: n,
+                                            _url: i.urls.attentionurl
+                                        }, function (e) {
+                                            var t = e,
+                                                n = t.status,
+                                                r = t.isatten;
+                                            n && (!1 === r ? a.html("关注") : a.html("取消关注"), a.attr("data-status", r))
+                                        }), e.stopPropagation(), e.preventDefault(), !1
+                                    })
+                                })) : alert("请求数据返回失败")
                             }), e.stopPropagation(), e.preventDefault(), !1
                         }), $(t).eq(0).trigger("click")))
                     }

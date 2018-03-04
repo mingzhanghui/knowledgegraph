@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人图谱详情</title>
+    <link href="./images/web/favicon.ico" rel="SHORTCUT ICON">
+    <!--css lib-->
+    <link rel="stylesheet" href="./public/common/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/web/font-awesome.min.css">
+    <!--common-->
+    <link rel="stylesheet" href="./public/themes/default/css/common.css">
+    <link rel="stylesheet" href="./public/common/toolbar/css2016/index.css">
+    <!--个人图谱详情-->
+    <link rel="stylesheet" href="./css/kn_personal_detail.css">
+    <!--jquery-->
+    <script src="./js/web/libs/jquery-1.11.1.js"></script>
+</head>
+<body>
+<!--@ref: http://lib.csdn.net/my/structure/PHP-->
+<div id="J_nav"></div>
+<script>$("#J_nav").load("./public/html/nav.html");</script>
+
+<div class="mainCol clearfix padding15px addcolor">
+    <div class="blank_20px"></div>
+    <div class="kn_couml setborder whitebk clearfix">
+        <div class="kn_left pull-left">
+            <span class="picture">
+                <a href="javascript:"><img src="./images/web/newimgs/picnew.jpg" alt=""></a>
+            </span>
+        </div>
+        <div class="kn_right pull-left">
+            <div class="kn_d_top clearfix">
+                <span class="title"><a href="javascript:;">PHP</a><em>(<i>包括8条内容</i>)</em></span>
+                <span class="titleopt pull-right subinfors">
+                    <a href="javascript:" class="ahome releaseBtn releaseTrigger active">
+                        <i class="fa fa-mail-forward"></i>发布到首页
+                    </a>
+                    <a href="chart.html" class="asee" target="_blank">预览</a>
+                    <a href="edit.html">编辑</a>
+                </span>
+                <p class="padress">
+                    <a id="fe_text" href="http://lib.csdn.net/fareast_mzh/354185/chart/PHP" target="_blank" style="color: #2092D9;">http://lib.csdn.net/fareast_mzh/354185/chart/PHP</a>
+                    <a id="clip_button" href="javascript:;" data-clipboard-text="http://lib.csdn.net/fareast_mzh/354185/chart/PHP">复制地址</a>
+                    <i class="fa "></i>
+                </p>
+            </div>
+            <div class="kn_d_bottom">
+                <a href="javascript:void(0)" class="browser"><i class="fa fa-eye"></i>5</a>
+                <a href="http://lib.csdn.net/fareast_mzh/struct/PHP/comments" target="_blank" class="comment"><i class="fa fa-comment-o"></i>0</a>
+                <a href="javascript:void(0);" class="zan"><i class="fa fa-thumbs-o-up"></i>0</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blank_25px"></div>
+    <!--收藏列表-->
+    <div class="kn_left">
+        <div class="treenew setborder whitebk w296px clearfix">
+            <!--treemenu-->
+            <div class="listDragSortParent">
+                <button class="listDragSortTrigger">排序</button>
+            </div>
+            <div class="spantitle">PHP</div>
+            <div class="divlist03 dynamicollect">
+                <div class="menuL">
+                    <ul class="menubox treeboxnew">
+                        <li class="collectli">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/collection" data-id="-354185"><em>收藏列表</em></a>
+                        </li>
+                        <li data-id="13571923">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571923" data-id="13571923" class="">
+                                <em>Development Environment</em>
+                                <i class="fa iconfa fa-angle-up"></i>
+                            </a>
+                            <ul class="subul" style="display: block;">
+                                <li data-id="13571931">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571931" data-id="13571931" class="roots">
+                                        <em class="iless"></em>
+                                        <span>LAMP environment<i class="fa iconfa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="subul" style="display: none;">
+                                        <li class="" data-id="19046942">
+                                            <a href="http://lib.csdn.net/my/structure/PHP/node/19046942" data-id="19046942" class="">
+                                                <em class="iless"></em>
+                                                <span>linux</span></a>
+                                        </li>
+                                        <li class="ligray" data-id="19046943">
+                                            <a href="http://lib.csdn.net/my/structure/PHP/node/19046943" data-id="19046943" class="noclick curgray">
+                                                <em class="iless"></em>
+                                                <span>apache</span></a>
+                                        </li>
+
+                                        <li class="" data-id="19046944">
+                                            <a href="http://lib.csdn.net/my/structure/PHP/node/19046944" data-id="19046944" class="">
+                                                <em class="iless"></em>
+                                                <span>mysql</span></a>
+                                        </li>
+                                        <li class="" data-id="19046945">
+                                            <a href="http://lib.csdn.net/my/structure/PHP/node/19046945" data-id="19046945" class="">
+                                                <em class="iless"></em>
+                                                <span>php</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-id="13571932">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571932" data-id="13571932" class="">
+                                        <em class="iless"></em>
+                                        <span>IDE</span>
+                                    </a>
+                                </li>
+                                <li data-id="13571933">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571933" data-id="13571933" class="">
+                                        <em class="iless"></em>
+                                        <span>Tools</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ligray" data-id="13571924">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571924" data-id="13571924" class="noclick curgray">
+                                <em>基础知识</em>
+                                <i class="fa iconfa fa-angle-up"></i>
+                            </a>
+                            <ul class="subul">
+                                <li class="ligray" data-id="13571934">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571934" data-id="13571934" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>数据类型</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571935">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571935" data-id="13571935" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>基础函数</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571936">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571936" data-id="13571936" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>正则表达式</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="" data-id="13571925"><span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571925" data-id="13571925" class="noclick curgray roots">
+                                <em>常用扩展</em>
+                                <i class="fa iconfa fa-angle-up"></i>
+                            </a>
+                            <ul class="subul">
+                                <li class="ligray" data-id="13571937">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571937" data-id="13571937" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>MySQL</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571938">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571938" data-id="13571938" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>MongoDB</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571939">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571939" data-id="13571939" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>其他数据库</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571940">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571940" data-id="13571940" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>缓存操作</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571941">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571941" data-id="13571941" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>文件操作</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571942">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571942" data-id="13571942" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>URL操作</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ligray" data-id="13571926">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571926" data-id="13571926" class="noclick curgray">
+                                <em>格式解析</em>
+                                <i class="fa fa-angle-down iconfa"></i>
+                            </a>
+                            <ul class="subul">
+                                <li class="ligray" data-id="13571943">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571943" data-id="13571943" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>XML</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571944">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571944" data-id="13571944" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>JSON</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571945">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571945" data-id="13571945" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>序列化</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571946">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571946" data-id="13571946" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>二进制协议</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ligray" data-id="13571927">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571927" data-id="13571927" class="noclick curgray">
+                                <em>面向对象编程</em>
+                                <i class="fa fa-angle-down iconfa"></i>
+                            </a>
+                            <ul class="subul">
+                                <li class="ligray" data-id="13571947">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571947" data-id="13571947" class="noclick curgray">
+                                        <em class="iless"></em><span>面向对象语法</span>
+                                    </a>
+                                </li>
+                                <li class="ligray" data-id="13571948">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571948" data-id="13571948" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>命名空间</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571949">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571949" data-id="13571949" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>自动载入</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571950">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571950" data-id="13571950" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>魔术方法</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571951">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571951" data-id="13571951" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>异常处理</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571952">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571952" data-id="13571952" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>SPL</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571953">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571953" data-id="13571953" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>设计模式</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ligray" data-id="13571928">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571928" data-id="13571928" class="noclick curgray">
+                                <em>Web开发</em>
+                                <i class="fa fa-angle-down iconfa"></i>
+                            </a>
+                            <ul class="subul">
+                                <li class="ligray" data-id="13571954">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571954" data-id="13571954" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>php-fpm配置</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571955">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571955" data-id="13571955" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>Apache配置</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571956">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571956" data-id="13571956" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>Nginx配置</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571957">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571957" data-id="13571957" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>请求处理</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571958">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571958" data-id="13571958" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>Session</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571959">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571959" data-id="13571959" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>网站安全</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-id="13571929">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571929" data-id="13571929" class="">
+                                <em>开发框架</em>
+                                <i class="fa fa-angle-down iconfa"></i>
+                            </a>
+                            <ul class="subul" style="display: none;">
+                                <li data-id="13571960">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571960" data-id="13571960" class="">
+                                        <em class="iless"></em>
+                                        <span>YII</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571961">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571961" data-id="13571961" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>Zend Framework</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571962">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571962" data-id="13571962" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>Symfony</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571963">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571963" data-id="13571963" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>CodeIgniter</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571964">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571964" data-id="13571964" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>ThinkPHP</span></a>
+                                </li>
+                                <li data-id="13571965">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571965" data-id="13571965" class="">
+                                        <em class="iless"></em>
+                                        <span>Laravel
+          <i class="fa fa-angle-down iconfa"></i></span>
+                                    </a>
+                                    <ul class="subul">
+                                        <li class="" data-id="19046941">
+                                            <a href="http://lib.csdn.net/my/structure/PHP/node/19046941" data-id="19046941" class="">
+                                                <em class="iless"></em>
+                                                <span>laravel china</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="" data-id="13571930">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571930" data-id="13571930" class="noclick curgray roots">
+                                <em>系统架构</em>
+                                <i class="fa iconfa fa-angle-down"></i>
+                            </a>
+                            <ul class="subul" style="display: none;">
+                                <li class="ligray" data-id="13571966">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571966" data-id="13571966" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>队列服务</span></a>
+                                </li>
+                                <li class="ligray" data-id="13571967">
+                                    <a href="http://lib.csdn.net/my/structure/PHP/node/13571967" data-id="13571967" class="noclick curgray">
+                                        <em class="iless"></em>
+                                        <span>PHP集群</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ligray" data-id="13571968">
+                            <span class="whiteblank"><em class="cirle"></em></span>
+                            <a href="http://lib.csdn.net/my/structure/PHP/node/13571968" data-id="13571968" class="noclick curgray">
+                                <em>代码片</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.kn_left-->
+    <!--知识内容-->
+    <div class="kn_right w830px">
+        <div class="kn_list setborder whitebk clearfix">
+            <div class="rhtitle">知识内容
+                <div class="addopts pull-right importParent addtextou" style="display: block;">
+                    <a href="javascript:void(0);" class="addknowledgec">
+                        <i class="fa fa-plus-circle"></i>直接添加</a>
+                    <a href="javascript:void(0);" class="importTrigger">
+                        <i class="fa fa-plus-circle"></i>导入添加</a>
+                </div>
+            </div>
+            <ul class="listuls listhovers">
+                <div class="simpleresult" style="display:none;">
+                    <p class="clearfix">
+                        <i class="fa fa-frown-o"></i>
+                        <span>该知识点下还没有任何知识内容
+            <br>你可以自主
+            <a href="" onclick="_addBtn();return false;">添加知识内容</a>或者移动
+            <a href="http://lib.csdn.net/my/structure/PHP/collection">收藏列表</a>中的内容到此知识点</span></p>
+                </div>
+                <input type="hidden" id="_klg" value="19046942">
+                <input type="hidden" id="_node" value="13571923">
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="https://www.mysql.com/" target="_blank">&nbsp;mysql official website</a></span>
+                    <span class="opt optbtns" style="display: none;">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall" style="display: none;">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833115" data-id="833115" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833115" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833115" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833115" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="https://www.eclipse.org/downloads/" target="_blank">&nbsp;eclipse</a></span>
+                    <span class="opt optbtns" style="display: none;">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833110" data-id="833110" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833110" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833110" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833110" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="http://jp2.php.net" target="_blank">&nbsp;php official website</a></span>
+                    <span class="opt optbtns" style="display: none;">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833108" data-id="833108" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833108" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833108" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833108" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="https://www.bejson.com/" target="_blank">&nbsp;json online format</a></span>
+                    <span class="opt optbtns" style="display: none;">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833079" data-id="833079" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833079" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833079" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833079" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="http://www.jetbrains.com/phpstorm/" target="_blank">&nbsp;phpstorm</a></span>
+                    <span class="opt optbtns">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833076" data-id="833076" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833076" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833076" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833076" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+                <li class="clearfix ncol">
+        <span class="text">
+          <a href="http://wiki.jikexueyuan.com/project/linux/lamp.html" target="_blank">&nbsp;LAMP environment</a></span>
+                    <span class="opt optbtns" style="display: none;">
+          <span class="opedits">
+            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+            <span class="listspan listall">
+              <a href="http://lib.csdn.net/submit/0/user?contentId=833075" data-id="833075" class="submit" target="_blank">提交</a>|
+              <a href="javascript:void(0);" data-id="833075" class="modify modifybtn">修改</a>|
+              <a href="javascript:void(0);" data-id="833075" class="move moveifybtn">移动</a>|
+              <a href="javascript:void(0);" data-id="833075" class="delete deleteifybtn">删除</a></span>
+          </span>
+        </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.kn_right-->
+</div>
+<script src="./min/clipboard.min.js"></script>
+<script src="./js/web/my_clipboard.js"></script>
+<script src="./public/footer/js/public_footer-1.0.2.js"></script>
+
+</body>
+</html>

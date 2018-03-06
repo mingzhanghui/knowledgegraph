@@ -2175,11 +2175,15 @@ body {
 .marklayer {
     width: 100%;
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
     opacity: .8;
     filter: alpha(Opacity=80);
     z-index: 8
+}
+
+.layercontent > .layerwrap > .inputs.path {
+    font-size: 14px;
 }
 
 .list_drag_sort {

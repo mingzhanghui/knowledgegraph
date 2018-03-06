@@ -1,6 +1,6 @@
 var clMenuOn;
 var hash = '#md';
-var PageOn = " active cblue",
+var PageOn = "active cblue",
     treeMenuOn = 'root';
 var eleMenus = $("#tab_title a"),
     parentTab = $("#tab_title");

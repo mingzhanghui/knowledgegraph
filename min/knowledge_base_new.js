@@ -19,10 +19,10 @@
                                 leavemsgurl: "/assemble/submitfeedback",
                                 getstructurl: "/my/getstruct",
                                 simpleopturl: {
-                                    addurl: "/my/structure/content/add",
+                                    addurl: "/my/structure/content/add",   // 增加知识内容
                                     modifyurl: "/my/structure/content/modify",
                                     moveifyurl: "/my/structure/content/move",
-                                    deleteifyurl: "/my/structure/content/delete"
+                                    deleteifyurl: "/my/structure/content/delete"  // 删除知识内容:
                                 },
                                 treeurls: "/ajax/singleContent",
                                 othertreeurls: "/ajax/other/singleContent",

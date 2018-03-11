@@ -69,10 +69,11 @@ function loadMap(t, a, n) {
       }
     })
   }).charge(-1300).linkDistance(200).nodes(a).links(n).size([l, i]).alpha(.1), o.append("svg:defs").append("svg:marker").attr("id", "arrow").attr("viewBox", "0 -5 10 10").attr("refX", 6).attr("markerWidth", 5).attr("markerHeight", 5).attr("orient", "auto").append("svg:path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#6ac6ff"), s.selectAll("line.link").data(n).enter().append("line").attr("class", "link");
+
   var d = s.selectAll("link.desc").data(n).enter().append("text").attr("class", "desc").text(function(t) {
       return t.desc
     }),
-    f = (u.drag().on("dragstart", function(t) {
+  f = (u.drag().on("dragstart", function(t) {
       t.fixed = !0
     }), s.selectAll("g.node").data(a)),
     p = f.enter().append("g").attr("class", function(t, e) {

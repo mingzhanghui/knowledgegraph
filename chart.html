@@ -143,15 +143,17 @@
       width: dw,
       height: dh
     };
-    
+
+    var URL_NODE = window.CONTEXT_PATH + "/Index/listNode";  // './data/node.json',
+    var URL_LINK = window.CONTEXT_PATH + "/Index/listLink"; // './data/link.json';
+
     $.ajax({
       type: 'GET',
-      url: './data/node.json',
+      url: URL_NODE,
       dataType: 'json',
       contentType: 'application/x-www-form-urlencoded; charset=utf-8'
     }).done(function(node) {
-      // window.CONTEXT_PATH + "/Index/listLink"
-      $.getJSON('./data/link.json', null, function(link) {
+      $.getJSON(URL_LINK, null, function(link) {
         console.log(link);
         loadMap(options, node, link);
       });

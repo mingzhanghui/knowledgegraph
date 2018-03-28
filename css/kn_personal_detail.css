@@ -2492,3 +2492,7 @@ body {
 .simplemyknowledgestruct .structWrap .contentR .sublistli li .opedits .listspan{
     width: 220px;
 }
+
+.treeboxnew .fa.iconfa {
+    padding: 2px 10px 2px 4px;
+}

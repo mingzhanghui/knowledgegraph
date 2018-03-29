@@ -1294,7 +1294,6 @@ body {
 .kn_list .listuls li .opt {
     float: right;
     position: relative;
-    display: none;
     width: 20%;
     text-align: right
 }
@@ -1308,14 +1307,16 @@ body {
 
 .kn_list .listuls li .opt .opedits .editbtn {
     font-size: 14px;
-    color: #819dab
+    color: #819dab;
+    position: absolute;
+    right: -60px;
 }
 
 .kn_list .listuls li .opt .opedits .listspan {
     position: absolute;
-    width: 162px;
+    width: 200px;
     margin: 0;
-    right: 0;
+    right: -62px;
     top: 22px;
     background-color: #fff;
     -webkit-box-shadow: 1px 1px 4px #ccc;
@@ -1326,7 +1327,6 @@ body {
     color: #d9e5eb;
     padding: 3px 5px;
     z-index: 5;
-    display: none
 }
 
 .kn_list .listuls li .opt .opedits .listspan:before {
@@ -1359,7 +1359,15 @@ body {
     display: inline-block;
     color: #819dab;
     font-size: 14px;
-    margin: 0 10px
+    margin: 0;
+    float: left;
+}
+
+.kn_list .listuls li .opt .opedits .listspan a:not(:last-child):after {
+    display: inline-block;
+    float: right;
+    content: "|";
+    padding: 0 10px;
 }
 
 .kn_list .listuls li .opt .opedits .listspan .delete {

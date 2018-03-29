@@ -372,119 +372,49 @@
         </div>
     </div>
     <!--/.kn_left-->
-    <!--知识内容-->
+
+    <!------------------------------------知识内容BEGIN------------------------------------------>
     <div class="kn_right w830px">
         <div class="kn_list setborder whitebk clearfix">
             <div class="rhtitle">知识内容
-                <div class="addopts pull-right importParent addtextou" style="display: block;">
-                    <a href="javascript:void(0);" class="addknowledgec">
-                        <i class="fa fa-plus-circle"></i>直接添加</a>
-                    <a href="javascript:void(0);" class="importTrigger">
-                        <i class="fa fa-plus-circle"></i>导入添加</a>
+                <div class="addopts pull-right importParent addtextou">
+                    <a id="J_addcontent" href="javascript:;" class="addknowledgec"><i class="fa fa-plus-circle"></i>直接添加</a>
+                    <!--<a href="javascript:void(0);" class="importTrigger"><i class="fa fa-plus-circle"></i>导入添加</a>-->
                 </div>
             </div>
-            <ul class="listuls listhovers">
-                <div class="simpleresult" style="display:none;">
-                    <p class="clearfix">
-                        <i class="fa fa-frown-o"></i>
-                        <span>该知识点下还没有任何知识内容
-            <br>你可以自主
-            <a href="" onclick="_addBtn();return false;">添加知识内容</a>或者移动
-            <a href="http://lib.csdn.net/my/structure/PHP/collection">收藏列表</a>中的内容到此知识点</span></p>
+            <div id="J_content">
+                <!--
+                <div class="simpleresult">
+                    <p class="clearfix"><i class="fa fa-frown-o"></i><span>该知识点下还没有任何知识内容<br>你可以自主
+                        <a href="" onclick="_addBtn();return false;">添加知识内容</a>或者移动
+                        <a href="http://lib.csdn.net/my/structure/PHP/collection">收藏列表</a>中的内容到此知识点</span></p>
                 </div>
-                <input type="hidden" id="_klg" value="19046942">
-                <input type="hidden" id="_node" value="13571923">
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="https://www.mysql.com/" target="_blank">&nbsp;mysql official website</a></span>
-                    <span class="opt optbtns" style="display: none;">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall" style="display: none;">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833115" data-id="833115" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833115" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833115" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833115" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="https://www.eclipse.org/downloads/" target="_blank">&nbsp;eclipse</a></span>
-                    <span class="opt optbtns" style="display: none;">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833110" data-id="833110" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833110" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833110" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833110" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="http://jp2.php.net" target="_blank">&nbsp;php official website</a></span>
-                    <span class="opt optbtns" style="display: none;">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833108" data-id="833108" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833108" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833108" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833108" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="https://www.bejson.com/" target="_blank">&nbsp;json online format</a></span>
-                    <span class="opt optbtns" style="display: none;">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833079" data-id="833079" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833079" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833079" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833079" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="http://www.jetbrains.com/phpstorm/" target="_blank">&nbsp;phpstorm</a></span>
-                    <span class="opt optbtns">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833076" data-id="833076" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833076" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833076" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833076" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-                <li class="clearfix ncol">
-        <span class="text">
-          <a href="http://wiki.jikexueyuan.com/project/linux/lamp.html" target="_blank">&nbsp;LAMP environment</a></span>
-                    <span class="opt optbtns" style="display: none;">
-          <span class="opedits">
-            <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
-            <span class="listspan listall">
-              <a href="http://lib.csdn.net/submit/0/user?contentId=833075" data-id="833075" class="submit" target="_blank">提交</a>|
-              <a href="javascript:void(0);" data-id="833075" class="modify modifybtn">修改</a>|
-              <a href="javascript:void(0);" data-id="833075" class="move moveifybtn">移动</a>|
-              <a href="javascript:void(0);" data-id="833075" class="delete deleteifybtn">删除</a></span>
-          </span>
-        </span>
-                </li>
-            </ul>
+                -->
+                <ul class="listuls listhovers">
+                    <li class="clearfix ncol">
+                        <p class="text"><a href="https://www.mysql.com/" target="_blank">&nbsp;mysql official website</a></p>
+                        <div class="opt optbtns" style="display: none;">
+                            <div class="opedits">
+                                <a href="javascript:void(0);" class="editbtn editopt">编辑</a>
+                                <div class="listspan listall" style="display: none;">
+                                    <a href="http://lib.csdn.net/submit/0/user?contentId=833115" data-id="833115" class="submit" target="_blank">提交</a>|
+                                    <a href="javascript:void(0);" data-id="833115" class="modify modifybtn">修改</a>|
+                                    <a href="javascript:void(0);" data-id="833115" class="move moveifybtn">移动</a>|
+                                    <a href="javascript:void(0);" data-id="833115" class="delete deleteifybtn">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
         </div>
     </div>
-    <!--/.kn_right-->
+    <!------------------------------------知识内容END------------------------------------------>
 </div>
+
 <!--modals-->
-<div class="windowLayer windowLayerwh addknowledgecontent" style="display: none; margin-top: -133.5px; margin-left: -269px;">
+<div id="J_modal_add" class="windowLayer windowLayerwh addknowledgecontent">
     <div class="windowContent">
         <div class="layeropt">
             <div class="layer02top">

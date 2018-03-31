@@ -30,18 +30,19 @@
         </div>
         <div class="kn_right pull-left">
             <div class="kn_d_top clearfix">
-                <span class="title"><a href="javascript:;">PHP</a><em>(<i>包括8条内容</i>)</em></span>
+                <span id="J_struct_title" class="title">
+                    <a href="javascript:;">PHP</a><em>(<i>包括8条内容</i>)</em>
+                </span>
                 <span class="titleopt pull-right subinfors">
                     <a href="javascript:" class="ahome releaseBtn releaseTrigger active">
                         <i class="fa fa-mail-forward"></i>发布到首页
                     </a>
                     <a id="J_preview" href="chart.html" class="asee" target="_blank">预览</a>
-                    <a href="edit.html">编辑</a>
+                    <a href="edit.html?structid=1">编辑</a>
                 </span>
                 <p class="padress">
-                    <a id="fe_text" href="http://lib.csdn.net/fareast_mzh/354185/chart/PHP" target="_blank" style="color: #2092D9;">http://lib.csdn.net/fareast_mzh/354185/chart/PHP</a>
+                    <a id="fe_text" href="http://lib.csdn.net/fareast_mzh/354185/chart/PHP" target="_blank">http://lib.csdn.net/fareast_mzh/354185/chart/PHP</a>
                     <a id="clip_button" href="javascript:;" data-clipboard-text="http://lib.csdn.net/fareast_mzh/354185/chart/PHP">复制地址</a>
-                    <i class="fa "></i>
                 </p>
             </div>
             <div class="kn_d_bottom">
@@ -378,7 +379,7 @@
         <div class="kn_list setborder whitebk clearfix">
             <div class="rhtitle">知识内容
                 <div class="addopts pull-right importParent addtextou">
-                    <a id="J_addcontent" href="javascript:;" class="addknowledgec"><i class="fa fa-plus-circle"></i>直接添加</a>
+                    <a id="J_content_add" href="javascript:;" class="addknowledgec"><i class="fa fa-plus-circle"></i>直接添加</a>
                     <!--<a href="javascript:void(0);" class="importTrigger"><i class="fa fa-plus-circle"></i>导入添加</a>-->
                 </div>
             </div>
@@ -391,6 +392,7 @@
                 </div>
                 -->
                 <ul class="listuls listhovers">
+                    <!--
                     <li class="clearfix ncol">
                         <p class="text"><a href="https://www.mysql.com/" target="_blank">&nbsp;mysql official website</a></p>
                         <div class="opt optbtns" style="display: none;">
@@ -405,7 +407,7 @@
                             </div>
                         </div>
                     </li>
-
+                    -->
                 </ul>
             </div>
         </div>
@@ -422,28 +424,29 @@
                 <a href="" class="closec">&times;</a>
             </div>
             <div class="layercontent">
-                <div class="layerwrap">
+                <form class="layerwrap" method="POST">
                     <div class="inputs path">Development Environment - LAMP environment - linux</div>
+                    <input type="hidden" name="nodeid">
                     <div class="inputs">
                         <label>标题：</label>
-                        <input type="text" />
+                        <input type="text" name="name"  required />
                         <span class="error" style="display: none;"><i class="fa fa-warning"></i>标题不能为空</span>
                     </div>
                     <div class="inputs">
                         <label>链接：</label>
-                        <input type="text" class="urls" />
+                        <input type="text" class="urls" name="url" required />
                         <span class="error" style="display: none;"><i class="fa fa-warning"></i>链接不能为空</span>
                     </div>
                     <div class="pbottom">
-                        <a href="" class="addbutn addconfrim">确认</a>
-                        <a href="" class="resetbtn cancelbtn">取消</a>
+                        <a href="javascript:;" type="submit" class="addbutn addconfirm">确认</a>
+                        <a href="javascript:;" class="resetbtn cancelbtn">取消</a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<div class="windowLayer windowLayerwh editknowledgecontent">
+<div id="J_modal_edit" class="windowLayer windowLayerwh editknowledgecontent">
     <div class="windowContent">
         <div class="layeropt">
             <div class="layer02top">
@@ -451,27 +454,28 @@
                 <a href="" class="closec">&times;</a>
             </div>
             <div class="layercontent">
-                <div class="layerwrap">
+                <form class="layerwrap" action="POST">
+                    <input type="hidden" name="id">
                     <div class="inputs">
                         <label>标题：</label>
-                        <input type="text" />
+                        <input type="text" name="name" />
                         <span class="error"><i class="fa fa-warning"></i>标题不能为空</span>
                     </div>
                     <div class="inputs">
                         <label>链接：</label>
-                        <input type="text" class="urls" />
+                        <input type="text" class="urls" name="url" />
                         <span class="error"><i class="fa fa-warning"></i>链接不能为空</span>
                     </div>
                     <div class="pbottom">
-                        <a href="" class="addbutn addconfrim">确认</a>
-                        <a href="" class="resetbtn cancelbtn">取消</a>
+                        <a href="javascript:;" class="addbutn addconfirm">确认</a>
+                        <a href="javascript:;" class="resetbtn cancelbtn">取消</a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<div class="windowLayer windowLayerwh knowledgecontentmove">
+<div id="J_modal_move" class="windowLayer windowLayerwh knowledgecontentmove">
     <div class="windowContent">
         <div class="layeropt">
             <div class="layer02top">
@@ -482,13 +486,21 @@
                 <div class="layerwrap">
                     <div class="knowledgemove clearfix">
                         <div class="selectlayer clearfix">
+                            <!--
                             <div class="selectdiv">
-                                <select><option data-pid="13571923" data-type="0">Development Environment</option><option data-pid="13571924" data-type="0">基础知识</option><option data-pid="13571925" data-type="0">常用扩展</option><option data-pid="13571926" data-type="0">格式解析</option><option data-pid="13571927" data-type="0">面向对象编程</option><option data-pid="13571928" data-type="0">Web开发 </option><option data-pid="13571929" data-type="0">开发框架 </option><option data-pid="13571930" data-type="0">系统架构 </option><option data-pid="13571968" data-type="1">代码片</option></select>
+                                <select>
+                                    <option value="1">Development Environment</option>
+                                </select>
                             </div>
+                            -->
                         </div>
+                        <form method="GET">
+                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="nodeid" value="">
+                        </form>
                     </div>
                     <div class="pbottom">
-                        <a href="" class="addbutn addconfrim">确认</a>
+                        <a href="" class="addbutn addconfirm">确认</a>
                         <a href="" class="resetbtn cancelbtn">取消</a>
                     </div>
                 </div>
@@ -509,7 +521,7 @@
                     <em>你确定要删除该条知识内容吗？</em>
                 </div>
                 <div class="lastbtns">
-                    <a href="" class="addbtn addconfrim">确认</a>
+                    <a href="" class="addbtn addconfirm">确认</a>
                     <a href="" class="cancelbtn">取消</a>
                 </div>
             </div>
@@ -517,10 +529,8 @@
     </div>
 </div>
 <!--mask-->
-<div class="marklayer whitebk" style="height: 1190px; display: none;"></div>
 
-<!--<script src="./min/clipboard.min.js"></script>-->
-<!--<script src="./js/web/my_clipboard.js"></script>-->
+<div id="J_mask" class="marklayer whitebk"></div>
 
 <!--global const-->
 <script src="./js/global.js"></script>

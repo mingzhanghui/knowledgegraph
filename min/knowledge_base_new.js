@@ -611,7 +611,7 @@
                     },
                     _cancelCollect: function (e) {
                         var t;
-                        $(".collectcancel .addconfrim").off("click"), $(".marklayer").css("height", $(doc).height()).show(), $(".collectcancel .addconfrim").on("click", function (n) {
+                        $(".collectcancel .addconfirm").off("click"), $(".marklayer").css("height", $(doc).height()).show(), $(".collectcancel .addconfirm").on("click", function (n) {
                             t = e.elm.data("id") || e.elm.attr("data-id"), This = $(this);
                             var a = t.split("-")[0],
                                 r = t.split("-")[3];
@@ -777,7 +777,7 @@
 
                         function a(e, t) {
                             var n;
-                            $(".releaselayer .addconfrim").length > 0 && (n = $(".releaselayer .addconfrim"), n.off("click"), n.on("click", function () {
+                            $(".releaselayer .addconfirm").length > 0 && (n = $(".releaselayer .addconfirm"), n.off("click"), n.on("click", function () {
                                 var a, r, i, l, o, s, c;
                                 return l = n.parents(".releaselayer").find(".sharediv select"), o = n.parents(".releaselayer").find(".textareabox textarea"), s = o.data("text") || o.attr("data-text"), a = l.eq(0).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), r = l.eq(1).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), i = $.trim(o.val()), s === i && (i = ""), c = l.eq(1).find("option:selected").text(), $.ajax({
                                     url: e._This.urls.releaseurl,
@@ -818,7 +818,7 @@
                                 parentag: ".createdom",
                                 dataid: n,
                                 fn: function (e) {
-                                    $(".marklayer").css("height", $(doc).height()).show(), $(".deletemaplayersimple .addconfrim,.deletemaplayerall .addconfrim").off("click"), $(".deletemaplayersimple .addconfrim,.deletemaplayerall .addconfrim").on("click", function () {
+                                    $(".marklayer").css("height", $(doc).height()).show(), $(".deletemaplayersimple .addconfirm,.deletemaplayerall .addconfirm").off("click"), $(".deletemaplayersimple .addconfirm,.deletemaplayerall .addconfirm").on("click", function () {
                                         $(".deletemaplayersimple,.deletemaplayerall").hide(), $(".marklayer").hide();
                                         $(this);
                                         return $.ajax({
@@ -1293,7 +1293,7 @@
                                 }
                             }), $(".deletemaplayer .closec,.deletemaplayer .cancelbtn").on("mouseup", function (e) {
                                 1 === Number(e.which, 10) && $(".marklayer").hide()
-                            }), $(".deletemaplayer .addconfrim").on("click", function () {
+                            }), $(".deletemaplayer .addconfirm").on("click", function () {
                                 var e, t;
                                 return e = $(".createdoms .mapname input[type=text]").data("baseid") || $(".createdoms .mapname input[type=text]").attr("data-baseid"), t = $(this), t.parents(".deletemaplayer").hide(), $(".marklayer").hide(), $.ajax({
                                     url: f.urls.deletedomurl,
@@ -1779,7 +1779,7 @@
                     _determine: function (e, t) {
                         var n, a, r, i, l, o = {},
                             s = this;
-                        $(".editknowledgecontent .addconfrim,.addknowledgecontent .addconfrim,.knowledgecontentmove .addconfrim,.deleteconfrim .addconfrim").off("click"), $(".editknowledgecontent .addconfrim,.addknowledgecontent .addconfrim,.knowledgecontentmove .addconfrim,.deleteconfrim .addconfrim").on("click", function (c) {
+                        $(".editknowledgecontent .addconfirm,.addknowledgecontent .addconfirm,.knowledgecontentmove .addconfirm,.deleteconfrim .addconfirm").off("click"), $(".editknowledgecontent .addconfirm,.addknowledgecontent .addconfirm,.knowledgecontentmove .addconfirm,.deleteconfrim .addconfirm").on("click", function (c) {
                             if (a = t.elm.data("data-id") || t.elm.attr("data-id"), r = t.elm.data("data-type") || t.elm.attr("data-type"), "delete" == e && (n = s.urls.simpleopturl.deleteifyurl, o.content_id = a, o.type = r), "move" == e && (i = $(".knowledgecontentmove .selectlayer .selectdiv").last().find("option:selected").data("pid") || $(".knowledgecontentmove .selectlayer .selectdiv").last().find("option:selected").attr("data-pid"), n = s.urls.simpleopturl.moveifyurl, o.content_id = a, o.knowledge_id = i, o.type = r), "add" == e) {
                                 var d = !1;
                                 n = s.urls.simpleopturl.addurl, $(".addknowledgecontent .inputs input").blur();

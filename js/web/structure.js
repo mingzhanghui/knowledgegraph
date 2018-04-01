@@ -4,6 +4,7 @@
 var STRUCT_ID, NODE_ID;
 
 STRUCT_ID = UrlParam.hasParam('structid') ? UrlParam.param("structid") : 1; // default value for test
+NODE_ID = UrlParam.hasParam('node') ? UrlParam.param('node') : null;
 
 var $mask = null, nodetree;
 
@@ -302,7 +303,7 @@ $.ajax({
     (function($aa) {
         var nodeid = null;
         load_cookie(function() {
-            nodeid = $.cookie('nodeid');
+            nodeid = UrlParam.hasParam('node') ? UrlParam.param('node') : $.cookie('nodeid');
             var i = 0, n = $aa.length, $a = null;
             var f = false;
             for (; i < n; i++) {

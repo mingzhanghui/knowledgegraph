@@ -34,7 +34,7 @@
                                 releaseurl: "/my/structure/share",
                                 deletedomurl: "/ajax/deleteStructure",
                                 // addtreedataurl: "/ajax/createStructure",
-                                addtreedataurl: "./data/ajax/createStructureResponse.json",
+                                addtreedataurl: window.CONTEXT_PATH + "/Index/createStructure",
                                 edittreedataurl: "/ajax/handleStructure",
                                 suburl: "/subContent",
                                 importUrl: "/ajax/importArticle",
@@ -779,24 +779,25 @@
                             var n;
                             $(".releaselayer .addconfirm").length > 0 && (n = $(".releaselayer .addconfirm"), n.off("click"), n.on("click", function () {
                                 var a, r, i, l, o, s, c;
-                                return l = n.parents(".releaselayer").find(".sharediv select"), o = n.parents(".releaselayer").find(".textareabox textarea"), s = o.data("text") || o.attr("data-text"), a = l.eq(0).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), r = l.eq(1).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), i = $.trim(o.val()), s === i && (i = ""), c = l.eq(1).find("option:selected").text(), $.ajax({
-                                    url: e._This.urls.releaseurl,
-                                    async: !0,
-                                    type: "post",
-                                    dataType: "json",
-                                    data: {
-                                        bid: $("#bid").val(),
-                                        oassort: a,
-                                        obid: r,
-                                        desc: i,
-                                        sname: c
-                                    },
-                                    success: function (e) {
-                                        t ? t(e) : console.log("提供请求回调接口!")
-                                    },
-                                    error: function () {
-                                    }
-                                }), !1
+                                return l = n.parents(".releaselayer").find(".sharediv select"), o = n.parents(".releaselayer").find(".textareabox textarea"), s = o.data("text") || o.attr("data-text"), a = l.eq(0).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), r = l.eq(1).find("option:selected").data("id") || l.eq(0).find("option:selected").attr("data-id"), i = $.trim(o.val()), s === i && (i = ""), c = l.eq(1).find("option:selected").text(),
+                                    $.ajax({
+                                        url: e._This.urls.releaseurl,
+                                        async: !0,
+                                        type: "post",
+                                        dataType: "json",
+                                        data: { 
+                                            bid: $("#bid").val(),
+                                            oassort: a,
+                                            obid: r,
+                                            desc: i,
+                                            sname: c
+                                        },
+                                        success: function (e) {
+                                            t ? t(e) : console.log("提供请求回调接口!")
+                                        },
+                                        error: function () {
+                                        }
+                                    }), !1
                             }), $(".releaselayer .textareabox textarea").blur(function () {
                                 $.trim($(this).val()) != ($(this).data("text") || $(this).attr("data-text")) ? $(this).addClass("lightgray") : $(this).removeClass("lightgray")
                             }))
@@ -873,9 +874,9 @@
                                 // <input placeholder="输入个人知识图谱名称" maxlength="20">
                                 if (!$.trim($(".createdoms .mapname .inputmap input").val()))
                                     return o($(".createdoms .mapname .inputmap"), {
-                                    text: "图谱名称不能为空",
-                                    tag: "errorinfor"
-                                }, !0), !1;
+                                        text: "图谱名称不能为空",
+                                        tag: "errorinfor"
+                                    }, !0), !1;
 
                                 if (o($(".createdoms .mapname .inputmap"), {
                                         text: "",
@@ -930,8 +931,6 @@
                                     }, !1),
                                         /* create knowledge graph 创建知识图谱 */
                                         function (data, n) {
-                                            alert(JSON.stringify(data));
-
                                             var u;
                                             n.hasClass("addnew") ? u = e.urls.addtreedataurl : n.hasClass("addedit") && (u = e.urls.edittreedataurl),
                                                 $.ajax({
@@ -943,19 +942,14 @@
                                                         treedata: JSON.stringify(data)
                                                     },
                                                     success: function (e) {
-                                                        var t;
-                                                        t = e.status, t ? n.hasClass("addnew") ?
-                                                            (window.location.href = "/my/structure/" + encodeURIComponent(e.title),
-                                                                 window.location.href = "/my/structure/" + encodeURIComponent(e.title)) :
-                                                            n.hasClass("addedit") && (window.location.href = $(".struct-url").length > 0 ?
-                                                            $(".struct-url").attr("href") : window.location) : alert(e.err)
+                                                        e.id && (location.href = e.url);
                                                     },
                                                     error: function () {
                                                         console.log(n);   // $("<a class='bc addsub addnew'>")
                                                         throw "服务器请求失败！"
                                                     }
                                                 })
-                                        }(l, t)   // l?
+                                        }(l, t);   // l?
                                 }
                             }()
                         }
@@ -1328,10 +1322,10 @@
                                         $(this).attr("data-status", "true")
                                     })
                                 }(),
-                                /* 点击创建图谱 */
-                                $(".mapwrap .submitdiv .addsub").on("click", function () {
-                                    return l(f, $(this)), !1
-                                })
+                                    /* 点击创建图谱 */
+                                    $(".mapwrap .submitdiv .addsub").on("click", function () {
+                                        return l(f, $(this)), !1
+                                    })
                             ),
                             $("#soliderMain").length > 0 && this._solider(), $("#colsolider3").length > 0 && this._scrollTabMove({
                                 movetag: "#ulmove3",
@@ -1382,30 +1376,30 @@
                                         u(".kn_importlist .selectcheck");
                                         var t = $("#_klg").val();
                                         return !!/^\+?[1-9][0-9]*$/.test(t) && ($.ajax({
-                                            url: e._This.urls.importUrl,
-                                            async: !0,
-                                            type: "POST",
-                                            dataType: "json",
-                                            data: {
-                                                data: $("#checkvalues").val(),
-                                                id: t
-                                            },
-                                            success: function (e) {
-                                                var t = e.status;
-                                                if ($(".pinfort span").html(""), t) $(".pinfort").addClass("successinfor").find("span").html('<i class="fa fa-check-circle"></i>导入成功,' + e.succ + "条成功" + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""));
-                                                else {
-                                                    var n = e.errcode;
-                                                    if (1 == n) {
-                                                        var a = "https://passport.csdn.net/account/login?from=" + encodeURI(location.href);
-                                                        window.location = a
-                                                    } else 2 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>不是最末级节点') : 3 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>尚未选择内容') : $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>导入失败,' + (e.succ ? " " + e.succ + "条成功" : "") + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""))
+                                                url: e._This.urls.importUrl,
+                                                async: !0,
+                                                type: "POST",
+                                                dataType: "json",
+                                                data: {
+                                                    data: $("#checkvalues").val(),
+                                                    id: t
+                                                },
+                                                success: function (e) {
+                                                    var t = e.status;
+                                                    if ($(".pinfort span").html(""), t) $(".pinfort").addClass("successinfor").find("span").html('<i class="fa fa-check-circle"></i>导入成功,' + e.succ + "条成功" + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""));
+                                                    else {
+                                                        var n = e.errcode;
+                                                        if (1 == n) {
+                                                            var a = "https://passport.csdn.net/account/login?from=" + encodeURI(location.href);
+                                                            window.location = a
+                                                        } else 2 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>不是最末级节点') : 3 == n ? $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>尚未选择内容') : $(".pinfort").addClass("errorinfor").find("span").html('<i class="fa fa-times-circle"></i>导入失败,' + (e.succ ? " " + e.succ + "条成功" : "") + (e.prohibit ? " " + e.prohibit + "条内容或标题违反规则" : "") + (e.error ? " " + e.error + "条不明原因失败" : "") + (e.repeat ? " " + e.repeat + "条重复" : ""))
+                                                    }
+                                                    $(".pinfort").removeClass("hide")
+                                                },
+                                                error: function (e) {
+                                                    console.log("服务器错误")
                                                 }
-                                                $(".pinfort").removeClass("hide")
-                                            },
-                                            error: function (e) {
-                                                console.log("服务器错误")
-                                            }
-                                        }), !1)
+                                            }), !1)
                                     }), $(".kn_importlist .page a").on("click", function () {
                                         var e, n, a, r, i, l;
                                         if ($(this).hasClass("previous") && (e = -1), $(this).hasClass("next") && (e = 1), a = $(".kn_importlist .tab a.root").index(), n = $(".kn_importlist .tab a.root").data("id") || $(".kn_importlist .tab a.root").attr("data-id"), r = $(".kn_importlist .tabcontent ul").eq(a), i = parseFloat($(r).find(".page").val(), 10), l = parseFloat($(r).find(".total_page").val(), 10), i + e <= 0 || i + e > l) return $(this).removeClass("root"), !1;
@@ -1972,12 +1966,12 @@
                                         n = $(this).parent().children(".subc").html(),
                                         a = $(this).attr("data-id");
                                     return !t[0].tag && (t.addClass("root"), r._opdate({
-                                        text: n,
-                                        id: a
-                                    }, function () {
-                                        t.attr("data-id");
-                                        t[0].tag = !0, r._scrollBar()
-                                    }), e.stopPropagation(), e.preventDefault(), !1)
+                                            text: n,
+                                            id: a
+                                        }, function () {
+                                            t.attr("data-id");
+                                            t[0].tag = !0, r._scrollBar()
+                                        }), e.stopPropagation(), e.preventDefault(), !1)
                                 }
 
                                 var t, n = $(".listselect") || unf,

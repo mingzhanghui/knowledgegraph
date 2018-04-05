@@ -35,9 +35,9 @@
     <div class="divlist03 dynamicollect">
       <!--我的知识结构图列表-->
       <div class="myknowledgestruct">
-        <p class="textfor">还不知道如何优雅地使用个人知识图谱？欢迎查阅<a href="http://lib.csdn.net/guide/structure" target="_blank">知识图谱指南&nbsp;<i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a></p>
+        <!--<p class="textfor">还不知道如何优雅地使用个人知识图谱？欢迎查阅<a href="http://lib.csdn.net/guide/structure" target="_blank">知识图谱指南&nbsp;<i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a></p>-->
 
-        <ul class="listbox clearfix listboxhover">
+        <ul class="listbox clearfix listboxhover" id="J_listbox">
           <li>
             <a href="structure.html?structid=2">
               <div class="colorbox"></div>
@@ -50,8 +50,8 @@
             <a href="structure.html?structid=1">
               <div class="colorbox"></div>
               <div class="boxphoto"><img src="./images/web/newimgs/structimg.gif" /></div>
-              <div class="title">PHP</div>
-              <div class="numbs"><em>8</em>条知识内容</div></a>
+              <div class="title">???</div>
+              <div class="numbs"><em>?</em>条知识内容</div></a>
           </li>
         </ul>
 
@@ -65,14 +65,13 @@
 
 </div>
 <script src="./js/web/libs/jquery-1.11.1.js"></script>
+<script>$("#J_nav").load("./public/html/nav.html");</script>
+<script src="./js/global.js"></script>
+<script src="./js/web/index.js"></script>
 <!--我的知识库 submenu dropdown-->
 <script type="text/javascript" src="./js/web/my_knowledge.js"></script>
 <script src="./public/footer/js/public_footer-1.0.2.js"></script>
-
-<script>
-    $("#J_nav").load("./public/html/nav.html");
-    $("#J_sidebar").load("./public/html/sidebar.html");
-</script>
+<script>$("#J_sidebar").load("./public/html/sidebar.html");</script>
 
 </body>
 </html>

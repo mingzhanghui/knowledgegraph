@@ -49,6 +49,7 @@ $.get(window.CONTEXT_PATH + "/Index/structInfo", {'structid':STRUCT_ID}, functio
         (new Script()).set("./js/web/my_clipboard.js");
     });
     script.set("./min/clipboard.min.js");
+    $(".spantitle").html(data.title);
 });
 
 // load 左边收藏列表
@@ -57,8 +58,8 @@ $.ajax({
     url: window.CONTEXT_PATH + "/Index/nodeTree",
     data: { structid: STRUCT_ID },
     cache: true
-}).done(function(resp) {
-    var data = nodetree = resp[0];
+}).done(function(data) {
+    var nodetree = data;
 
     var $menu = $("#J_menu").empty();
     var $box = $("<ul>").addClass("menubox").addClass("treeboxnew");
@@ -451,6 +452,9 @@ $(function() {
         $form.get(0).reset();   // reset form input
         $form.find(".error").hide();
     });
+
+    // 修改图谱node
+    $("#J_edit").attr("href", "edit.html?structid=" + STRUCT_ID);
 });
 
 /**

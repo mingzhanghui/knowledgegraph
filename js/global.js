@@ -8,12 +8,27 @@ var getSingle = function(fn) {
     }
 };
 
+document.getElementById = (function(func) {
+    return function() {
+        return func.apply(document, arguments);
+    }
+})(document.getElementById);
+var getId = document.getElementById;
+
+Function.prototype.bind = function(context) {
+    var self = this,
+        context = [].shift.call(arguments),
+        args = [].slice.call(arguments);
+    return function() {
+        return self.apply(context, [].concat.call(args, [].slice.call(arguments)));
+    }
+};
 
 /**
  * var load_js = new Script(script_onload);
  * load_js.set("http://static.gongju.com/js/jquery-1.4.4.min.js");
  *
- * @param callback jsæ–‡ä»¶åŠ è½½å®Œäº†callback function
+ * @param callback
  */
 function Script(callback) {
     var js = document.createElement("script");

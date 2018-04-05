@@ -3861,17 +3861,11 @@ jQuery.Deferred.exceptionHook = function( error, stack ) {
 	}
 };
 
-
-
-
 jQuery.readyException = function( error ) {
 	window.setTimeout( function() {
 		throw error;
 	} );
 };
-
-
-
 
 // The deferred used on DOM ready
 var readyList = jQuery.Deferred();

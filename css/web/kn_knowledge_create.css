@@ -1157,6 +1157,7 @@ a:hover {
 .createdoms .mapwrap .allwrap {
   position: relative;
   width: 100%;
+  height: 33px;
 }
 .createdoms .mapwrap .allwrap .inputmap {
   float: right;

@@ -612,7 +612,7 @@ svg {
 }
 
 svg text {
-    font-family: fantasy;
+    /*font-family: fantasy;*/
     font-size: 14px;
     color: #ffffe0
 }

@@ -103,18 +103,40 @@ var script = new Script(function() {
                 treedata.dom.push(dom1);
             });
 
-            alert(JSON.stringify(treedata));
+            // alert(JSON.stringify(treedata));
             // $.ajax 编辑图谱
-            /*
-             * 删除node     这个node以及child nodes关联有知识内容content ? 不能删除 : 直接删除node，不等到按提交按钮
-             * 新增node     {"title": "php",	"status": true} 该node没有"nid"字段表示是新增的node, 有status=true
-             * 修改node名称 {"title": "linux111", "nid": 19046942,"status": true}, 带有nid字段，这个节点在数据库node表中的id，和status=true
-             * node不变     {"title": "apache","nid": 19046943} 有nid字段，没有status字段
-             */
+            $.ajax({
+                type: 'POST',
+                url: window.CONTEXT_PATH + "/Index/editStructure?structid=" + STRUCT_ID,
+                data: {treedata: JSON.stringify(treedata)}
+            }).done(function(data) {
+                try {
+                    if (0==data.code) {
+                        location.href = "structure.html?structid=" + STRUCT_ID
+                    } else {
+                        alert(JSON.stringify(data));
+                    }
+                } catch (e) {
+                    alert(e);
+                    window.location.reload();
+                }
+            });
         });
         // 删除图谱
         $delbtn.click(function(e) {
             e.preventDefault();
+            var title = prompt("你保存在该图谱下的知识内容也会被删除，建议你先将内容移到其他图谱中。你确定要删除知识图谱及其内容吗？(请输入图谱名称)");
+            $.ajax({
+                type: 'GET',
+                url: window.CONTEXT_PATH + "/Index/promptDeleteStructure",
+                data: {title: encodeURI(title), structid: STRUCT_ID}
+            }).done(function(data) {
+                if (data.code) {
+                    alert(data.msg);
+                    return false;
+                }
+                window.location.href = "index.html";
+            });
         });
     });
     tree = getId("J_tree");
@@ -250,7 +272,7 @@ function createDom1(o) {
     });
     $editop.append($add).append($del);
     var $input = $("<input type=\"text\" maxlength=\"40\">").on("change", function() {
-       $(this).attr("data-status", true);
+        $(this).attr("data-status", true);
     });
     $inputmap.append($input);
 
@@ -333,17 +355,47 @@ function createDom3(o) {
 function deleteDom(o) {
     var $t = $(o);
     var nodeid = $t.attr("data-baseid");
-    if (nodeid) {
-        // confirm ? continue : return false
-        // xhr
-    }
-    var $div = $t.parent().parent().parent();
+    var d = function() {
+        var $div = $t.parent().parent().parent();
 
-    if ($div.hasClass("divwrap")) {
-        $div.parent().parent().remove();
-    } else if ($div.hasClass("createdom")) {
-        $div.remove();
+        if ($div.hasClass("divwrap")) {
+            $div.parent().parent().remove();
+        } else if ($div.hasClass("createdom")) {
+            $div.remove();
+        } else {
+            console.info($div.get(0));
+        }
+    };
+    // node exists?
+    if (nodeid) {
+        // xhr
+        $.ajax({
+            type: 'GET',
+            url: window.CONTEXT_PATH + "/Index/deleteNode",
+            data: {nodeid: nodeid}
+        }).done(function(data) {
+            console.log(data);
+            if (data.code == 0) {
+                // allow delete
+                if (confirm("你确定要删除该知识节点吗？")) {
+                    $.ajax({
+                        type: 'POST',
+                        url: window.CONTEXT_PATH + "/Index/doDelNodes",
+                        data: {nodeIdList: JSON.stringify(data.nodeIdList)}
+                    }).done(function(resp) {
+                        console.log(resp.count + " nodes deleted!");
+                        d();
+                    })
+                }
+            } else {
+                alert("无法删除该知识节点，因该节点下仍保存有相关知识内容！");
+            }
+        });
+
     } else {
-        console.info($div.get(0));
+        // new node
+        d();
     }
+
+    return false;
 }

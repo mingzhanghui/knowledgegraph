@@ -30,25 +30,29 @@ $(function () {
         });
     });
 
-    // 全屏
-    /*
-     var isAll = false;
-     $("#fullscreen").on('click', function () {
-     $('#mapRow').html('');
-     !isAll ? ($(this).find('.fa').removeClass('fa-expand').addClass('fa-compress'), $(this).find('em').text('退出全屏'), $("#kl_screen").css({
-     "width": w,
-     "height": h
-     }).addClass('kl_str_screen'), isAll = true, options = {
-     'width': w,
-     'height': h
-     }, loadMap(options, node, linnk)) : ($(this).find('.fa').removeClass('fa-compress').addClass('fa-expand'), $(this).find('em').text('全屏'), $("#kl_screen").css({
-     "width": 'auto',
-     "height": 'auto'
-     }).removeClass('kl_str_screen'), isAll = false, options = {
-     'width': dw,
-     'height': dh
-     }, loadMap(options, node, link));
-     return false;
-     });
-     */
+    // 全屏 buggy
+    var isAll = false;
+    $("#fullscreen").on('click', function () {
+        $('#mapRow').html('');
+        !isAll ? ($(this).find('.fa').removeClass('fa-expand').addClass('fa-compress'), $(this).find('em').text('退出全屏'), $("#kl_screen").css({
+            "width": w,
+            "height": h
+        }).addClass('kl_str_screen'), isAll = true, options = {
+            'width': w,
+            'height': h
+        }, loadMap(options, node, linnk)) : ($(this).find('.fa').removeClass('fa-compress').addClass('fa-expand'), $(this).find('em').text('全屏'), $("#kl_screen").css({
+            "width": 'auto',
+            "height": 'auto'
+        }).removeClass('kl_str_screen'), isAll = false, options = {
+            'width': dw,
+            'height': dh
+        }, loadMap(options, node, link));
+        return false;
+    });
+
+    // 图谱名称
+    var title = decodeURI(UrlParam.param("title"));
+    $("#J_title").text(title).on("click", function(e) {
+       window.location.href = "structure.html?structid=" + structid;
+    }).css("cursor","pointer");
 });

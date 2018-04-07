@@ -8,12 +8,6 @@ NODE_ID = UrlParam.hasParam('node') ? UrlParam.param('node') : null;
 
 var $mask = null, nodetree;
 
-$("#J_preview").on("click", function(e) {
-    e.preventDefault();
-    // chart.html?structid=1
-    location.href = this.href + "?structid=" + STRUCT_ID;
-});
-
 var load_cookie = function(fn) {
     if ($.cookie) {
         fn.apply(this, arguments);
@@ -50,6 +44,8 @@ $.get(window.CONTEXT_PATH + "/Index/structInfo", {'structid':STRUCT_ID}, functio
     });
     script.set("./min/clipboard.min.js");
     $(".spantitle").html(data.title);
+
+    $("#J_preview").attr("href", "chart.html?" + "structid=" + STRUCT_ID + "&title=" + encodeURI(data.title));
 });
 
 // load 左边收藏列表

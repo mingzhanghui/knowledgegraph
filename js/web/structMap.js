@@ -47,7 +47,7 @@ function loadMap(t, a, n) {
       }
     }), s.selectAll("g.node").selectAll("text.nTxt").attr({
       x: function(t) {
-        return t.x - 15
+        return t.x - 8
       },
       y: function(t) {
         return t.y + 6

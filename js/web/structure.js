@@ -221,7 +221,7 @@ $.ajax({
                     var $t = $(this);
                     $form.find("input[name='id']").val($t.attr("data-id"));
                     // 三级联动
-                    var $sl = $modal.find(".selectlayer");
+                    var $sl = $modal.find(".selectlayer").empty();
                     var $sd1 = $("<div>").addClass("selectdiv").appendTo($sl);
                     var $select1 = $("<select>").appendTo($sd1);
                     nodetree.childs.forEach(function(node1) {
@@ -354,6 +354,8 @@ $.ajax({
             $modaladd.find(".cancelbtn").trigger("click");  // modal.hide
             $("#J_menu").find("a.roots").trigger("click");  // refresh content list
             console.log("add content#" + data.id);
+        }).always(function() {
+            
         });
     });
     $modaladd.find(".cancelbtn").on("click", function() {
@@ -438,6 +440,8 @@ $(function() {
             $modalmove.find(".cancelbtn").trigger("click"); // modal.hide
             $("#J_menu").find("a.roots").trigger("click");  // refresh content list
             console.log(data);
+        }).always(function() {
+            $modalmove.find(".selectlayer").empty();
         });
     });
     $modalmove.find(".cancelbtn").on("click", function(e) {
@@ -447,6 +451,7 @@ $(function() {
         var $form = $t.find("form");
         $form.get(0).reset();   // reset form input
         $form.find(".error").hide();
+        $modalmove.find(".selectlayer").empty();
     });
 
     // 修改图谱node

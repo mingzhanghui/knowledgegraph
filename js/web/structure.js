@@ -66,7 +66,7 @@ $.ajax({
         $box.append($li);
         var $whiteblank = $("<span>").addClass("whiteblank").html("<em class=\"cirle\"></em>");
         $li.append($whiteblank);
-        var $a = $("<a>").attr("href", a.href).attr("data-id", a.id);
+        var $a = $("<a>").attr("href", a.href).attr("data-id", a.id).attr("data-depth", 1);
         var $em = $("<em>").text(a.name);
         var $i = a.childs ? $("<i>").attr("class", "fa iconfa fa-angle-down") : null;
         // toggle hide/show
@@ -90,7 +90,7 @@ $.ajax({
         a.childs && ($subul = $("<ul>").addClass("subul").appendTo($li)) && a.childs.forEach(function(b) {
             var $subli = $("<li>").attr("data-id", b.id);
             $subul.append($subli);
-            var $a = $("<a>").attr("data-id", b.id); // addClass("roots") highlight
+            var $a = $("<a>").attr("data-id", b.id).attr("data-depth", 2); // addClass("roots") highlight
             $subli.append($a);
             $em = $("<em>").addClass("iless").appendTo($a);
             var $i = b.childs ? $("<i>").attr("class", "fa iconfa fa-angle-down") : null;
@@ -115,7 +115,7 @@ $.ajax({
             b.childs && ($leaful = $("<ul>").addClass("subul").appendTo($subli)) && b.childs.forEach(function(c) {
                 var $leafli = $("<li>").attr("data-id", c.id);
                 $leaful.append($leafli);
-                var $a = $("<a>").attr("data-id", c.id).attr("href", c.href);
+                var $a = $("<a>").attr("data-id", c.id).attr("href", c.href).attr("data-depth", 3);
                 $("<em>").addClass("iless").appendTo($a);
                 $("<span>").text(c.name).appendTo($a);
                 $leafli.append($a);
@@ -326,8 +326,23 @@ $.ajax({
             "margin-left": "-"+modal.clientWidth/2+"px"
         });
 
-        var nodename = $menu.find(".roots").text();
-        // TODO: depth>1
+        var $a = $menu.find(".roots");
+        var nodename = $a.text();
+        var depth = parseInt($a.attr("data-depth"));
+
+        switch (depth) {
+            case 1: break;
+            case 2:
+                nodename = $a.parent().parent().prev().text() + " - " + nodename;
+                break;
+            case 3:
+                var $p = $a.parent().parent().prev();
+                nodename = $p.text() + " - " + nodename;
+                $p = $p.parent().parent().prev();
+                nodename = $p.text() + " - " + nodename;
+                break;
+            default:        
+        }
         $modal.find(".inputs.path").text(nodename);
 
         // 当前选中节点ID

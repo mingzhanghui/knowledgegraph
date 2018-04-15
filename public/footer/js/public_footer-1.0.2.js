@@ -1,9 +1,11 @@
 //2017-12-19 15:00:21
 (function () {
-    // protocol = location.protocol.substr(0, 4) === 'http' ? '' : 'http:';
-    var protocol = 'http:';
-    // document.write("<link rel='stylesheet' type='text/css' href='" + protocol + "//csdnimg.cn/pubfooter/css/pub_footer_2014.css' />");
-    document.write("<link rel='stylesheet' type='text/css' href='./public/footer/css/pub_footer_2014.css' />");
+    var css = document.createElement("link");
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    css.href = './public/footer/css/pub_footer_2014.css';
+    document.head.append(css);
+
     document.write("<div class='pub_fo'>");
     document.write("<div id='pub_footerall' class='pub_footer_new'>");
     document.write("<dl>");
@@ -14,22 +16,4 @@
     document.write("</dl>");
     document.write("</div>");
     document.write("</div>");
-    // document.write('<script id="noticeScript" type="text/javascript" btnId="header_notice_num" wrapId="note1" count="5" subcount="5" src="' + protocol + '//csdnimg.cn/rabbit/notev2/js/notify.js?v=5.00.39"></script>');
-
-    /*
-    var head = document.getElementsByTagName('head')[0]
-        , s, ss = [
-            // protocol + '//csdnimg.cn/pubfooter/js/tracking-1.0.2.js'
-      './public/footer/js/tracking-1.0.2.js',
-       // protocol + '//csdnimg.cn/rabbit/exposure-click/main-1.0.2.js'
-      './rabbit/exposure-click/main-1.0.2.js'
-        ];
-    for(var i = 0; i < ss.length; i ++){
-        s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.charset = 'utf-8';
-        s.src = ss[i];
-        head.insertBefore(s, null);
-    }
-    */
 })();

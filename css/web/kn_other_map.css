@@ -644,7 +644,6 @@ svg .link {
 
 svg text.desc {
     fill: #000;
-    font-family: fantasy;
     font-size: 10px;
     font-weight: bolder
 }

@@ -27,46 +27,48 @@ $(function () {
         $.getJSON(URL_LINK, {'structid':structid}, function(l) {
             link = l;
             loadMap(options, node, link);
-        });
-    });
 
-    // 全屏 buggy
-    var isFull = false;
-    var w = $(window).width();
-    var h = $(window).height();
-    $("#fullscreen").on('click', function () {
-        $('#mapRow').empty();
-        var $t = $(this);
-        if (!isFull) {
-            // 进入全屏
-            $t.find('.fa').removeClass('fa-expand').addClass('fa-compress');
-            $t.find('em').text('退出全屏');
-            $("#kl_screen").css({
-                "width": w,
-                "height": h
-            }).addClass('kl_str_screen');
-            isFull = true;
-            options = {
-                'width': w,
-                'height': h
-            };
-            loadMap(options, node, link);
-        } else {
-            // 取消全屏
-            $t.find('.fa').removeClass('fa-compress').addClass('fa-expand');
-            $t.find('em').text('全屏');
-            $("#kl_screen").css({
-                "width": 'auto',
-                "height": 'auto'
-            }).removeClass('kl_str_screen');
-            isFull = false;
-            options = {
-                'width': dw,
-                'height': dh
-            };
-            loadMap(options, node, link);
-        }
-    });
+            // 全屏 buggy
+            var isFull = false;
+            var w = $(window).width();
+            var h = $(window).height();
+            $("#fullscreen").on('click', function () {
+                $('#mapRow').empty();
+                var $t = $(this);
+                if (!isFull) {
+                    // 进入全屏
+                    $t.find('.fa').removeClass('fa-expand').addClass('fa-compress');
+                    $t.find('em').text('退出全屏');
+                    $("#kl_screen").css({
+                        "width": w,
+                        "height": h
+                    }).addClass('kl_str_screen');
+                    isFull = true;
+                    options = {
+                        'width': w,
+                        'height': h
+                    };
+                    loadMap(options, node, link);
+                } else {
+                    // 取消全屏
+                    $t.find('.fa').removeClass('fa-compress').addClass('fa-expand');
+                    $t.find('em').text('全屏');
+                    $("#kl_screen").css({
+                        "width": 'auto',
+                        "height": 'auto'
+                    }).removeClass('kl_str_screen');
+                    isFull = false;
+                    options = {
+                        'width': dw,
+                        'height': dh
+                    };
+                    loadMap(options, node, link);
+                }
+            });
+        });   // $.getJSON(URL_LINK, ...)
+    }); // $.ajax({url: URL_NODE, ...})
+
+
 
     // 图谱名称
     var title = decodeURI(UrlParam.param("title"));

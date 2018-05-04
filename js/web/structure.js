@@ -45,7 +45,8 @@ $.get(window.CONTEXT_PATH + "/Index/structInfo", {'structid':STRUCT_ID}, functio
     script.set("./min/clipboard.min.js");
     $(".spantitle").html(data.title);
 
-    $("#J_preview").attr("href", "chart.html?" + "structid=" + STRUCT_ID + "&title=" + encodeURI(data.title));
+    var h = "chart.html?" + "structid=" + STRUCT_ID + "&title=" + encodeURI(data.title);
+    $("#J_preview").attr("href", h).prev().attr("href", h).attr("target", "_blank");
 });
 
 // load 左边收藏列表

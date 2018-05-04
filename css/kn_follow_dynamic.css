@@ -11,7 +11,7 @@ ol,ul {
 
 body {
     font-family: Microsoft Yahei;
-    background-color: #edf1f5
+    background-color: #edf1f5;
 }
 
 .mainCol {
@@ -1394,7 +1394,7 @@ a:hover {
     box-shadow: 1px 1px 4px #ccc
 }
 
-.myknowledgestruct .listbox .liroot {
+.myknowledgestruct .listbox .liroot, .myknowledgestruct .listbox li:hover {
     background-color: #f5f8f9;
     -webkit-box-shadow: 1px 1px 4px #ccc;
     -moz-box-shadow: 1px 1px 4px #ccc;

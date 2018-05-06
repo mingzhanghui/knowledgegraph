@@ -71,8 +71,8 @@ $(function () {
 
 
     // 图谱名称
-    var title = decodeURI(UrlParam.param("title"));
-    $("#J_title").text(title).on("click", function(e) {
+    var title = decodeURIComponent(UrlParam.param("title"));
+    $("#J_title").html(title).on("click", function(e) {
        window.location.href = "structure.html?structid=" + structid;
     }).css("cursor","pointer");
 });

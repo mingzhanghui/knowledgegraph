@@ -941,8 +941,16 @@
                                                     data: {
                                                         treedata: JSON.stringify(data)
                                                     },
-                                                    success: function (e) {
-                                                        e.id && (location.href = e.url);
+                                                    success: function (data) {
+                                                        if (data.id) {
+                                                            location.href = data.url;
+                                                        } else {
+                                                            return o($(".createdoms .mapname .inputmap"), {
+                                                                text: data.err,
+                                                                tag: "errorinfor"
+                                                            }, !0), !1;
+                                                        }
+                                                        // console.log(JSON.stringify(data));
                                                     },
                                                     error: function () {
                                                         console.log(n);   // $("<a class='bc addsub addnew'>")

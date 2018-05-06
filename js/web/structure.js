@@ -45,7 +45,7 @@ $.get(window.CONTEXT_PATH + "/Index/structInfo", {'structid':STRUCT_ID}, functio
     script.set("./min/clipboard.min.js");
     $(".spantitle").html(data.title);
 
-    var h = "chart.html?" + "structid=" + STRUCT_ID + "&title=" + encodeURI(data.title);
+    var h = "chart.html?" + "structid=" + STRUCT_ID + "&title=" + encodeURIComponent(data.title);
     $("#J_preview").attr("href", h).prev().attr("href", h).attr("target", "_blank");
 });
 

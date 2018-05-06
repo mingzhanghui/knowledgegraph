@@ -1,7 +1,7 @@
 /**
  * Created by Mch on 4/5/18.
  */
-var PAGE_SIZE = 12;
+var PAGE_SIZE = 9;
 
 $(function() {
     var $box = $("#J_listbox");  // 我的图谱列表
@@ -118,6 +118,8 @@ $(function() {
             render_pages(1);
         }
         render_list(slice);
+
+        $(".tab.root").html("我的图谱("+data.length+")");  // 显示图谱个数 我的图谱(12)
 
     }).done(function() {
         console.log("done");

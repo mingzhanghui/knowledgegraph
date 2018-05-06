@@ -1018,15 +1018,16 @@ body {
 .kn_couml .picture {
     display: inline-block;
     height: 80px;
-    width: 80px
+    width: 80px;
 }
 
 .kn_couml .picture img {
-    max-width: 100%
+    max-width: 100%;
 }
 
 .kn_couml .kn_d_top {
-    height: 62px
+    height: 80px;
+    padding: 10px 0;
 }
 
 .kn_couml .kn_d_top .title {
@@ -2469,9 +2470,10 @@ body {
 }
 
 .padress {
-    width: 170%;
+    width: 100%;
     cursor: default;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
     font-weight: normal;
 }
 

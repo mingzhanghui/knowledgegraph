@@ -146,6 +146,7 @@ $.ajax({
                     // "<a href=\"http://lib.csdn.net/my/structure/PHP/collection\">收藏列表</a>中的内容到此知识点</span>" +
                     "</p>" +
                     "</div>");
+                $t.parent().addClass("ligray");
                 return 0;
             }
             // 当前选中节点+子节点对应知识内容不为空
@@ -277,6 +278,10 @@ $.ajax({
                 });
             });
             $ul.find("a").first().trigger("click");
+
+            // 知识内容不为空 remove class li .ligray
+            var $li = $t.parent();
+            $li.hasClass("ligray") && $li.removeClass("ligray");
         });
 
         $alist.not($t).removeClass("roots");
@@ -368,7 +373,8 @@ $.ajax({
             data: $form.serialize()
         }).done(function(data) {
             $modaladd.find(".cancelbtn").trigger("click");  // modal.hide
-            $("#J_menu").find("a.roots").trigger("click");  // refresh content list
+            var $e = $("#J_menu").find("a.roots");
+            $e.trigger("click");  // refresh content list
             console.log("add content#" + data.id);
         }).always(function() {
             
@@ -383,7 +389,25 @@ $.ajax({
         $form.find(".error").hide();
     });
 
-});
+    // 节点下面没有内容的 置为灰色
+    var $ali = $menu.find("li"), a = [];
+    $.each($ali, function(i, li) {
+        a.push(li.getAttribute("data-id"));
+    });
+    $.ajax({
+        type: 'POST',
+        url: window.CONTEXT_PATH + "/Index/countContentByNodeIdList",
+        data: {a: JSON.stringify(a)}
+    }).done(function(data) {
+        $.each($ali, function(i, li) {
+            if (data[i]===0) {
+                li.classList.add("ligray");
+            }
+        });
+        console.log(data);
+    });
+    console.log(a);
+});  // END load 左边收藏列表
 
 $(function() {
     // modal mask

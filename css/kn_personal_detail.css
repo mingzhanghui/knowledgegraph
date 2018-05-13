@@ -1133,6 +1133,13 @@ body {
     border-left: 3px solid #e6f4ff;
     padding: 0 15px 15px 0
 }
+/* .menuL .menubox li.ligray {  } */
+.menuL .menubox li .subul li.ligray a span {
+    color: #b7c3d9;
+}
+.menuL .menubox li.ligray a em {
+    color: #b7c3d9;
+}
 
 .menuL .menubox li .whiteblank {
     width: 7px;

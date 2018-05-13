@@ -103,7 +103,6 @@ var script = new Script(function() {
                 treedata.dom.push(dom1);
             });
 
-            // alert(JSON.stringify(treedata));
             // $.ajax 编辑图谱
             $.ajax({
                 type: 'POST',
@@ -114,7 +113,11 @@ var script = new Script(function() {
                     if (0==data.code) {
                         location.href = "structure.html?structid=" + STRUCT_ID
                     } else {
-                        alert(JSON.stringify(data));
+                        // alert(JSON.stringify(data));
+                        return o($(".createdoms .mapname .inputmap"), {
+                            text: data.msg,
+                            tag: "errorinfor"
+                        }, !0), !1;
                     }
                 } catch (e) {
                     alert(e);
@@ -398,4 +401,18 @@ function deleteDom(o) {
     }
 
     return false;
+}
+
+/**
+ * 保存修改 错误
+ * @param e: $(".createdoms .mapname .inputmap")
+ * @param t: "{text: data.msg, tag: 'errorinfor'}"
+ * @param n: !0
+ * @returns {boolean}
+ */
+function o(e, t, n) {
+    var a, r;
+    if (a = t.text || "", r = t.tag, e.length <= 0 || !r) return !1;
+    if (e.next("." + r).length <= 0 && !0 === n) e.after($("<span class='" + r + "'>" + a + "</span>"));
+    else if (e.next("." + r).length > 0 && !1 === n) return e.next("." + r).empty().remove(), !1
 }

@@ -1,13 +1,13 @@
 /**
  * Created by Mch on 4/5/18.
  */
-var PAGE_SIZE = 9;
+var PAGE_SIZE = 9, userid = UrlParam.param('userid');
 
 $(function() {
     var $box = $("#J_listbox");  // 我的图谱列表
     var $pages = $("#pages");    // 我的图谱分页
 
-    var jqxhr = $.getJSON(window.CONTEXT_PATH + "/Index/listStructures", function(data) {
+    var jqxhr = $.get(window.CONTEXT_PATH + "/Index/listStructures", {'userid': userid}, function(data) {
         var totalPage = Math.ceil( data.length / PAGE_SIZE ), slice = [];
 
         var render_list = function(slice) {

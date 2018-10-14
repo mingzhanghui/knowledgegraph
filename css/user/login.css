@@ -15,13 +15,19 @@
     position: relative;
 }
 
-/*.login .content .forget-form, .login .content .register-form {  display: none;  }*/
-
 .login .content .hint {
     color: #999;
     padding: 0;
     margin: 15px 0 7px;
 }
+
+.login .content h3 {
+    color: #4db3a5;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400!important;
+}
+/*.login .content .forget-form, .login .content .register-form {  display: none;  }*/
 
 .login .content .form-control {
     background-color: #dde3ec;
@@ -29,6 +35,10 @@
     color: #8290a3;
     border: 1px solid #dde3ec;
     width: 310px;
+}
+
+.login .content .form-title {
+    margin-bottom: 25px;
 }
 
 .login .content .control-label {display: none;}
@@ -45,3 +55,17 @@
     color: #fff;
 }
 
+.login .content .check {
+    color: #8290a3;
+}
+
+.login .content .rememberme {
+    margin-left: 8px;
+    display: none;
+}
+
+.btn-block {
+    margin: 1px auto;
+    display: block;
+    width: 100%;
+}

@@ -2,36 +2,8 @@
  * Created by Mch on 10/14/18.
  */
 
-function load_captcha() {
-    var captchaWrapper = document.getElementById('captcha-wrapper'),
-        captcha = new Image();
-    const URL_CAPTCHA = window.CONTEXT_PATH + "/User/captcha";
-
-    captcha.src = URL_CAPTCHA + '?t=' + (new Date()).getTime();
-    captchaWrapper.appendChild(captcha);
-
-    var $captcha = $(captcha);
-    $captcha.on("click", function(e) {
-        e.target.src = URL_CAPTCHA + '?t=' + (new Date()).getTime();
-    });
-
-    var $refresh = $("<a href='javascript:;'>").css({
-        "display": "inline-block",
-        "padding-left": "6px"
-    }).on("click", function() {
-        $captcha.attr("src", URL_CAPTCHA + '?t=' + (new Date()).getTime());
-    }).html("点击刷新");
-
-    $captcha.parent().append($refresh);
-}
-
 window.onload = function () {
     load_captcha();
-
-    var script = new Script(function() {
-
-    });
-    script.set("./js/web/libs/jquery.cookie.js");
 
     var $noFix = $(".placeholder-no-fix");
 
@@ -41,24 +13,10 @@ window.onload = function () {
         $(this).prevAll().remove();
     });
 
-    $("#register-submit-btn").on("click", function (e) {
+    var submit_handler = function(e) {
         e.preventDefault();
 
         var bool = true;
-
-        if (bool) {
-            $.ajax({
-                type: 'POST',
-                url: window.CONTEXT_PATH + '/User/register',
-                data: $("#form-register").serialize(),
-                beforeSend: function(jqXHR) {
-                    // jqXHR.setRequestHeader("")
-                },
-                withCredentials: true
-            }).done(function(data) {
-                console.log(data);
-            });
-        }
 
         var $inputCaptcha = $("#register_captcha");
         if ($.cookie("captcha").toUpperCase() !== $inputCaptcha.val().toUpperCase()) {
@@ -100,10 +58,40 @@ window.onload = function () {
                 pass.prepend("<span class='help-block'><strong>" + "两次密码输入不一致" + "</strong></span>").addClass('has-error');
             }
             bool = false;
+            return false;
+        }
+
+        if (bool) {
+            $.ajax({
+                type: 'POST',
+                url: window.CONTEXT_PATH + '/User/register',
+                data: $("#form-register").serialize(),
+                beforeSend: function(jqXHR) {
+                    // jqXHR.setRequestHeader("")
+                },
+                withCredentials: true
+            }).done(function(data) {
+                if (data.code === 0) {
+                    window.location.href = "login.html";
+                } else {
+                    $("#statement_help").html(data.msg);
+                }
+            });
         }
 
         return true;
+    };
+
+    submit_handler = submit_handler.before(function() {
+        // clear last error
+        $("#statement_help").empty();
+    }).after(function() {
+        // update captcha
+        $("#captcha-wrapper").find("a").trigger("click");
     });
+
+    $("#register-submit-btn").on("click", submit_handler);
+
 
 };
 

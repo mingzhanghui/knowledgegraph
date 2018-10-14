@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="./css/user/component.css">
+    <link rel="stylesheet" href="./css/user/login.css">
+</head>
+<body class="login">
+<div class="logo"></div>
+<div class="content">
+    <form id="form-register" action="http://47.93.27.106:8082/index.php/User/register" class="register-form show">
+        <input type="hidden" name="_token" value="XdXRM5AA5Q5apLiC3JSwK1PbrkNKCzgz7pfTBVfw">
+        <p class="hint"> 在下面输入您的帐户详细信息： </p>
+        <div class="form-group">
+            <label for="register_name" class="control-label">用户名</label>
+            <input type="text" id="register_name" class="form-control placeholder-no-fix" name="name" placeholder="用户名" title="用户名" value="">
+        </div>
+        <div class="form-group">
+            <label for="register_email" class="control-label"></label>
+            <input type="text" id="register_email" class="form-control placeholder-no-fix" name="email" placeholder="E-mail" value="" title="email">
+        </div>
+        <div class="form-group">
+            <label for="register_password" class="control-label">密码</label>
+            <input type="password" id="register_password" class="form-control placeholder-no-fix" name="password" placeholder="密码" value="" title="密码">
+        </div>
+        <div class="form-group">
+            <label for="register_confirmation" class="control-label">确认密码</label>
+            <input type="password" id="register_confirmation" class="form-control placeholder-no-fix" name="confirm" placeholder="确认密码" value="" title="确认密码">
+        </div>
+        <div class="form-group">
+            <label for="register_captcha" class="control-label">验证码</label>
+            <input type="text" id="register_captcha" class="form-control placeholder-no-fix" name="captcha" placeholder="验证码" title="验证码" value="">
+        </div>
+        <div class="form-group" id="captcha-wrapper">
+
+        </div>
+        <div class="form-group has-error">
+            <br>
+            <span class="help-block">
+                <strong id="statement_help"></strong>
+            </span>
+        </div>
+        <div class="form-actions">
+            <a href="login.html" id="register-back-btn" class="btn green btn-outline">返回登录</a>
+            <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">提交</button>
+        </div>
+    </form>
+</div>
+<div class="copyright"></div>
+<script type="text/javascript" src="./js/web/libs/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="./js/global.js"></script>
+<script type="text/javascript" src="./js/user/register.js"></script>
+</body>
+</html>

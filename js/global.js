@@ -1,5 +1,5 @@
-// window.CONTEXT_PATH = "http://localhost:8000/d3.js/graph/public/index.php";
-window.CONTEXT_PATH = "http://localhost/d3.js/graph/public/index.php";
+// window.CONTEXT_PATH = "http://192.168.16.103:8082/index.php";
+window.CONTEXT_PATH = "http://47.93.27.106:8082/index.php";
 
 var getSingle = function(fn) {
     var result;
@@ -23,6 +23,10 @@ Function.prototype.bind = function(context) {
         return self.apply(context, [].concat.call(args, [].slice.call(arguments)));
     }
 };
+
+$.ajaxSetup({
+    widthCredentials: true,
+});
 
 /**
  * var load_js = new Script(script_onload);

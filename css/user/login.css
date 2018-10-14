@@ -1,0 +1,47 @@
+.login {
+    background-color: #364150!important;
+}
+
+.login .logo {
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.login .content {
+    background-color: #fff;
+    width: 340px;
+    margin: 40px auto 10px;
+    padding: 10px 30px 30px;
+    position: relative;
+}
+
+/*.login .content .forget-form, .login .content .register-form {  display: none;  }*/
+
+.login .content .hint {
+    color: #999;
+    padding: 0;
+    margin: 15px 0 7px;
+}
+
+.login .content .form-control {
+    background-color: #dde3ec;
+    padding: 2px 12px;
+    color: #8290a3;
+    border: 1px solid #dde3ec;
+    width: 310px;
+}
+
+.login .content .control-label {display: none;}
+
+.login .content .form-actions .btn {
+    margin-top: 1px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.login .content .form-actions .btn:hover {
+    background-color: #32c5d2;
+    color: #fff;
+}
+

@@ -69,3 +69,15 @@
     display: block;
     width: 100%;
 }
+
+.login .content .create-account {
+    margin: 0 -30px -30px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #6c7a8d;
+    border-radius: 0;
+}
+
+.login .content .create-account>p {
+    margin: 0;
+}

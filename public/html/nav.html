@@ -2,7 +2,7 @@
     <div class="mainCol clearfix padding15px">
         <a href="http://lib.csdn.net/home" class="logo"></a>
         <ul class="navs clearfix">
-            <li><a href="http://lib.csdn.net/home">首页</a></li>
+            <li><a href="/index.html">首页</a></li>
             <li>
                 <div class="my_knowledgewrap">
                     <!--http://lib.csdn.net/my/feed-->
@@ -16,8 +16,8 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="http://lib.csdn.net/bases">知识库列表</a></li>
-            <li><a href="http://lib.csdn.net/assemble" class="ahot">参与建库</a></li>
+            <li><a href="/index.html">知识库列表</a></li>
+            <li><a href="/index.html" class="ahot">参与建库</a></li>
             <li><a href="javascript:;" id="J_logout">退出登录</a></li>
         </ul>
     </div>
@@ -26,12 +26,14 @@
     <!--banner background-->
 </div>
 <script>
-//    $(function() {
-//       $("#J_logout").on("click", function(e) {
-//           $.get(window.CONTEXT_PATH + "/User/logout", function(data) {
-//               console.log(data)
-//           });
-//       });
-//        window.location.href = 'login.html';
-//    });
+    $(function() {
+       $("#J_logout").on("click", function(e) {
+           try {
+               ng.user.utility.logoff();
+           } catch (e) {
+               alert(e);
+               window.location.href = 'login.html?referer='+location.href;
+           }
+       });
+    });
 </script>

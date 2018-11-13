@@ -32,6 +32,7 @@ window.onload = function(e) {
         }
 
         var $btn = $(this).find("button[type=submit]");
+        // action="http://47.93.27.106:8082/index.php/User/login"
         $.ajax({
             type: 'POST',
             url: window.CONTEXT_PATH + '/User/login',
@@ -39,8 +40,17 @@ window.onload = function(e) {
             withCredential: true
         }).done(function(data) {
             if (data.code === 0) {
-                window.location.href = "index.html?userid=" + data.data;
-            } else {
+                var d = data.data;
+                $.cookie("ng_userid", d.userid);
+                $.cookie("ng_username", d.username);
+                setTimeout(function() {
+                    var referrer = window.location.search.substr(1)
+                        .split('&').find(function(s) { var a = s.split('='); return a[0] === 'referer';})
+                        .substr("referer=".length);
+                    window.location.href = referrer ? decodeURIComponent(referrer) : "index.html?userid=" + d.userid;
+                }, 100);
+            }
+            else {
                 $form.find("span").html(data.msg).show();
                 $form.find(".alert").show();
             }
@@ -58,5 +68,6 @@ window.onload = function(e) {
         $("#captcha-wrapper").find("a").trigger("click");
     });
 
-    $form.on("submit", submit_handler);
+    $("#J_login").on("click", submit_handler);
+    $form.on("submit", function(e) {e.preventDefault();})
 };

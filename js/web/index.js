@@ -1,7 +1,7 @@
 /**
  * Created by Mch on 4/5/18.
  */
-var PAGE_SIZE = 9, userid = UrlParam.param('userid');
+var PAGE_SIZE = 9, userid = UrlParam.param('userid') || $.cookie("ng_userid");
 
 $(function() {
     var $box = $("#J_listbox");  // 我的图谱列表

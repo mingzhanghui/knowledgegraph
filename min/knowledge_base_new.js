@@ -938,8 +938,16 @@
                                                     type: "post",
                                                     async: !0,
                                                     dataType: "json",
+                                                    beforeSend: function(jqXHR, settings) {
+                                                        jqXHR.widthCredentials = true;
+                                                    },
+                                                    xhrFields: {
+                                                        widthCredentials: true
+                                                    },
+                                                    crossDoamin: true,
                                                     data: {
-                                                        treedata: JSON.stringify(data)
+                                                        treedata: JSON.stringify(data),
+                                                        userid: ng.user.utility.getcookie('ng_userid')
                                                     },
                                                     success: function (data) {
                                                         if (data.id) {

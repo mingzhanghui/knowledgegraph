@@ -79,7 +79,11 @@
 <!--我的知识库 submenu dropdown-->
 <script type="text/javascript" src="./js/web/my_knowledge.js"></script>
 <script src="./public/footer/js/public_footer-1.0.2.js"></script>
-<script>$("#J_sidebar").load("./public/html/sidebar.html");</script>
+<script>
+  $("#J_sidebar").load("./public/html/sidebar.html", function(html) {
+    $(this).find(".addquestioninfor > .title > a").html(ng.user.utility.getcookie('ng_username'));
+  });
+</script>
 
 </body>
 </html>

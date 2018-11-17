@@ -25,7 +25,7 @@ Function.prototype.bind = function(context) {
 };
 
 $.ajaxSetup({
-    widthCredentials: true,
+    widthCredentials: true
 });
 
 /**

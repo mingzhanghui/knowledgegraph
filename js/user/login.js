@@ -14,8 +14,7 @@ window.onload = function(e) {
         });
     });
 
-    var $form = $("#form-login"), submit_handler = (function(e) {
-        e.preventDefault();
+    var $form = $("#form-login"), submit_handler = (function() {
         var $alert = $(".alert");
 
         var $name = $("#login_name"), $password = $("#login_password");
@@ -45,10 +44,14 @@ window.onload = function(e) {
                 $.cookie("ng_username", d.username);
                 setTimeout(function() {
                     var referrer = window.location.search.substr(1)
-                        .split('&').find(function(s) { var a = s.split('='); return a[0] === 'referer';})
-                        .substr("referer=".length);
-                    window.location.href = referrer ? decodeURIComponent(referrer) : "index.html?userid=" + d.userid;
-                }, 100);
+                        .split('&').find(function(s) { var a = s.split('='); return a[0] === 'referer';});
+                    if (referrer) {
+                        referrer = referrer.substr("referer=".length);
+                        window.location.href = decodeURIComponent(referrer);
+                    } else {
+                        window.location.href = "index.html?userid=" + d.userid;
+                    }
+                }, 10);
             }
             else {
                 $form.find("span").html(data.msg).show();
@@ -68,6 +71,13 @@ window.onload = function(e) {
         $("#captcha-wrapper").find("a").trigger("click");
     });
 
-    $("#J_login").on("click", submit_handler);
+    var $login = $("#J_login");
+    $login.on("click", submit_handler);
     $form.on("submit", function(e) {e.preventDefault();})
+
+    document.body.onkeydown = function(e) {
+        if (e.keyCode === 13) {
+            $login.trigger("click");
+        }
+    }
 };
